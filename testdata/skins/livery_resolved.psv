@@ -1,0 +1,253 @@
+# class_name|livery_name|veh_hash|livery_id|team|team_src|driver|driver_src|country|alt_team
+Prototype4|Sablefield Collective #1|-1974044939|50|Sablefield Collective|humano|Aldo Abbot|humano|NRV|
+Prototype4|Sablefield Collective #2|-64713235|51|Sablefield Collective|humano|Bram Bragg|humano|ALD|
+Prototype4|Verdant Collective #3|1182569040|52|Verdant Collective|humano|Cato Corliss|humano|KEM|
+Prototype4|Verdant Collective #4|-1974044939|53|Verdant Collective|humano|Dara Danforth|humano|SOL|
+Prototype4|Kestrel Collective #5|-64713235|54|Kestrel Collective|humano|Edran Ewart|humano|MAR|
+Prototype4|Kestrel Collective #6|1182569040|55|Kestrel Collective|humano|Fenn Fairbrass|humano|NRV|
+Prototype4|Halcyon Collective #7|-1974044939|56|Halcyon Collective|humano|Gero Gantry|humano|ALD|
+Prototype4|Halcyon Collective #8|-64713235|57|Halcyon Collective|humano|Hale Havel|humano|KEM|
+Prototype4|Ironmarch Collective #9|1182569040|58|Ironmarch Collective|humano|Ivo Ibbotson|humano|SOL|
+Prototype4|Ironmarch Collective #10|-1974044939|59|Ironmarch Collective|humano|Jory Jarrow|humano|MAR|
+Prototype4|Copperline Collective #11|-64713235|60|Copperline Collective|humano|Kell Kemble|humano|NRV|
+Prototype4|Copperline Collective #12|1182569040|61|Copperline Collective|humano|Lasse Lorimer|humano|ALD|
+Prototype4|Solstice Collective #13|-1974044939|62|Solstice Collective|humano|Mirko Mowbray|humano|KEM|
+Prototype4|Solstice Collective #14|-64713235|63|Solstice Collective|humano|Nael Naismith|humano|SOL|
+Prototype4|Lowtide Collective #15|1182569040|64|Lowtide Collective|humano|Osk Ockley|humano|MAR|
+Prototype4|Lowtide Collective #16|-1974044939|65|Lowtide Collective|humano|Piet Prewitt|humano|NRV|
+Prototype4|Ravenhurst Collective #17|-64713235|66|Ravenhurst Collective|humano|Quill Abbot|humano|ALD|
+Prototype4|Ravenhurst Collective #18|1182569040|67|Ravenhurst Collective|humano|Roan Bragg|humano|KEM|
+Prototype4|Amberfall Collective #19|-1974044939|68|Amberfall Collective|humano|Sten Corliss|humano|SOL|
+Prototype4|Amberfall Collective #20|-64713235|69|Amberfall Collective|humano|Tarn Danforth|humano|MAR|
+Prototype4|Meridian Syndicate #21|1182569040|70|Meridian Syndicate|humano|Aldo Ewart|humano|NRV|
+Prototype4|Meridian Syndicate #22|-1974044939|71|Meridian Syndicate|humano|Bram Fairbrass|humano|ALD|
+Prototype4|Northgate Syndicate #23|-64713235|72|Northgate Syndicate|humano|Cato Gantry|humano|KEM|
+Prototype4|Northgate Syndicate #24|1182569040|73|Northgate Syndicate|humano|Dara Havel|humano|SOL|
+Prototype4|Sablefield Syndicate #25|-1974044939|74|Sablefield Syndicate|humano|Edran Ibbotson|humano|MAR|
+Prototype4|Sablefield Syndicate #26|-64713235|75|Sablefield Syndicate|humano|Piet Naismith|humano|NRV|
+Prototype4|Verdant Syndicate #27|1182569040|76|Verdant Syndicate|humano||humano|ALD|
+Prototype4|Verdant Syndicate #28|-1974044939|77|Verdant Syndicate|humano||humano|KEM|
+Tourer5|Ravenhurst Foundry #1|1518017897|50|Ravenhurst Foundry|humano|Bram Corliss|humano|NRV|
+Tourer5|Ravenhurst Foundry #2|1157332180|51|Ravenhurst Foundry|humano|Cato Danforth|humano|ALD|
+Tourer5|Amberfall Foundry #3|-1236160182|52|Amberfall Foundry|humano|Dara Ewart|humano|KEM|
+Tourer5|Amberfall Foundry #4|1518017897|53|Amberfall Foundry|humano|Edran Fairbrass|humano|SOL|
+Tourer5|Meridian Collective #5|1157332180|54|Meridian Collective|humano|Fenn Gantry|humano|MAR|
+Tourer5|Meridian Collective #6|-1236160182|55|Meridian Collective|humano|Gero Havel|humano|NRV|
+Tourer5|Northgate Collective #7|1518017897|56|Northgate Collective|humano|Hale Ibbotson|humano|ALD|
+Tourer5|Northgate Collective #8|1157332180|57|Northgate Collective|humano|Ivo Jarrow|humano|KEM|
+Tourer5|Sablefield Collective #9|-1236160182|58|Sablefield Collective|humano|Jory Kemble|humano|SOL|
+Tourer5|Sablefield Collective #10|1518017897|59|Sablefield Collective|humano|Kell Lorimer|humano|MAR|
+Tourer5|Verdant Collective #11|1157332180|60|Verdant Collective|humano|Lasse Mowbray|humano|NRV|
+Tourer5|Verdant Collective #12|-1236160182|61|Verdant Collective|humano|Mirko Naismith|humano|ALD|
+Tourer5|Kestrel Collective #13|1518017897|62|Kestrel Collective|humano|Nael Ockley|humano|KEM|
+Tourer5|Kestrel Collective #14|1157332180|63|Kestrel Collective|humano|Osk Prewitt|humano|SOL|
+Tourer5|Halcyon Collective #15|-1236160182|64|Halcyon Collective|humano|Piet Abbot|humano|MAR|
+Tourer5|Halcyon Collective #16|1518017897|65|Halcyon Collective|humano|Quill Bragg|humano|NRV|
+Tourer5|Ironmarch Collective #17|1157332180|66|Ironmarch Collective|humano|Roan Corliss|humano|ALD|
+Tourer5|Ironmarch Collective #18|-1236160182|67|Ironmarch Collective|humano|Sten Danforth|humano|KEM|
+Tourer5|Copperline Collective #19|1518017897|68|Copperline Collective|humano|Tarn Ewart|humano|SOL|
+Tourer5|Copperline Collective #20|1157332180|69|Copperline Collective|humano|Fenn Prewitt|humano|MAR|
+Tourer5|Solstice Collective #21|-1236160182|70|Solstice Collective|humano|Gero Abbot|humano|NRV|
+Tourer5|Solstice Collective #22|1518017897|71|Solstice Collective|humano|Hale Bragg|humano|ALD|
+Tourer5|Lowtide Collective #23|1157332180|72|Lowtide Collective|humano|Ivo Corliss|humano|KEM|
+Tourer5|Lowtide Collective #24|-1236160182|73|Lowtide Collective|humano|Jory Danforth|humano|SOL|
+Tourer5|Ravenhurst Collective #25|1518017897|74|Ravenhurst Collective|humano||humano|MAR|
+Tourer5|Ravenhurst Collective #26|1157332180|75|Ravenhurst Collective|humano||humano|NRV|
+Tourer5|Amberfall Collective #27|-1236160182|76|Amberfall Collective|humano||humano|ALD|
+Tourer5|Amberfall Collective #28|1518017897|77|Amberfall Collective|humano||humano|KEM|
+Openwheel1|Meridian Collective #1|963980994|50|Meridian Collective|humano|Cato Ewart|humano|NRV|
+Openwheel1|Meridian Collective #2|1901332912|51|Meridian Collective|humano|Dara Fairbrass|humano|ALD|
+Openwheel1|Northgate Collective #3|-768252742|52|Northgate Collective|humano|Edran Gantry|humano|KEM|
+Openwheel1|Northgate Collective #4|963980994|53|Northgate Collective|humano|Fenn Havel|humano|SOL|
+Openwheel1|Sablefield Collective #5|1901332912|54|Sablefield Collective|humano|Gero Ibbotson|humano|MAR|
+Openwheel1|Sablefield Collective #6|-768252742|55|Sablefield Collective|humano|Hale Jarrow|humano|NRV|
+Openwheel1|Verdant Collective #7|963980994|56|Verdant Collective|humano|Ivo Kemble|humano|ALD|
+Openwheel1|Verdant Collective #8|1901332912|57|Verdant Collective|humano|Jory Lorimer|humano|KEM|
+Openwheel1|Kestrel Collective #9|-768252742|58|Kestrel Collective|humano|Kell Mowbray|humano|SOL|
+Openwheel1|Kestrel Collective #10|963980994|59|Kestrel Collective|humano|Lasse Naismith|humano|MAR|
+Openwheel1|Halcyon Collective #11|1901332912|60|Halcyon Collective|humano|Mirko Ockley|humano|NRV|
+Openwheel1|Halcyon Collective #12|-768252742|61|Halcyon Collective|humano|Nael Prewitt|humano|ALD|
+Openwheel1|Ironmarch Collective #13|963980994|62|Ironmarch Collective|humano|Osk Abbot|humano|KEM|
+Openwheel1|Ironmarch Collective #14|1901332912|63|Ironmarch Collective|humano|Piet Bragg|humano|SOL|
+Openwheel1|Copperline Collective #15|-768252742|64|Copperline Collective|humano|Quill Corliss|humano|MAR|
+Openwheel1|Copperline Collective #16|963980994|65|Copperline Collective|humano|Roan Danforth|humano|NRV|
+Openwheel1|Solstice Collective #17|1901332912|66|Solstice Collective|humano|Sten Ewart|humano|ALD|
+Openwheel1|Solstice Collective #18|-768252742|67|Solstice Collective|humano|Tarn Fairbrass|humano|KEM|
+Openwheel1|Lowtide Collective #19|963980994|68|Lowtide Collective|humano|Aldo Gantry|humano|SOL|
+Openwheel1|Lowtide Collective #20|1901332912|69|Lowtide Collective|humano|Bram Havel|humano|MAR|
+Openwheel1|Ravenhurst Collective #21|-768252742|70|Ravenhurst Collective|humano|Cato Ibbotson|humano|NRV|
+Openwheel1|Ravenhurst Collective #22|963980994|71|Ravenhurst Collective|humano|Dara Jarrow|humano|ALD|
+Openwheel1|Amberfall Collective #23|1901332912|72|Amberfall Collective|humano|Edran Kemble|humano|KEM|
+Openwheel1|Amberfall Collective #24|-768252742|73|Amberfall Collective|humano|Fenn Lorimer|humano|SOL|
+Openwheel1|Meridian Syndicate #25|963980994|74|Meridian Syndicate|humano|Gero Mowbray|humano|MAR|
+Openwheel1|Meridian Syndicate #26|1901332912|75|Meridian Syndicate|humano|Hale Naismith|humano|NRV|
+Openwheel1|Northgate Syndicate #27|-768252742|76|Northgate Syndicate|humano|Ivo Ockley|humano|ALD|
+Openwheel1|Northgate Syndicate #28|963980994|77|Northgate Syndicate|humano||humano|KEM|
+Roadster2|Ravenhurst Foundry #1|-1156223040|50|Ravenhurst Foundry|humano|Dara Gantry|humano|NRV|
+Roadster2|Ravenhurst Foundry #2|1180556861|51|Ravenhurst Foundry|humano|Edran Havel|humano|ALD|
+Roadster2|Amberfall Foundry #3|1121958742|52|Amberfall Foundry|humano|Fenn Ibbotson|humano|KEM|
+Roadster2|Amberfall Foundry #4|-1156223040|53|Amberfall Foundry|humano|Gero Jarrow|humano|SOL|
+Roadster2|Meridian Collective #5|1180556861|54|Meridian Collective|humano|Hale Kemble|humano|MAR|
+Roadster2|Meridian Collective #6|1121958742|55|Meridian Collective|humano|Ivo Lorimer|humano|NRV|
+Roadster2|Northgate Collective #7|-1156223040|56|Northgate Collective|humano|Jory Mowbray|humano|ALD|
+Roadster2|Northgate Collective #8|1180556861|57|Northgate Collective|humano|Kell Naismith|humano|KEM|
+Roadster2|Sablefield Collective #9|1121958742|58|Sablefield Collective|humano|Lasse Ockley|humano|SOL|
+Roadster2|Sablefield Collective #10|-1156223040|59|Sablefield Collective|humano|Mirko Prewitt|humano|MAR|
+Roadster2|Verdant Collective #11|1180556861|60|Verdant Collective|humano|Nael Abbot|humano|NRV|
+Roadster2|Verdant Collective #12|1121958742|61|Verdant Collective|humano|Osk Bragg|humano|ALD|
+Roadster2|Kestrel Collective #13|-1156223040|62|Kestrel Collective|humano|Piet Corliss|humano|KEM|
+Roadster2|Kestrel Collective #14|1180556861|63|Kestrel Collective|humano|Quill Danforth|humano|SOL|
+Roadster2|Halcyon Collective #15|1121958742|64|Halcyon Collective|humano|Roan Ewart|humano|MAR|
+Roadster2|Halcyon Collective #16|-1156223040|65|Halcyon Collective|humano|Sten Fairbrass|humano|NRV|
+Roadster2|Ironmarch Collective #17|1180556861|66|Ironmarch Collective|humano|Tarn Gantry|humano|ALD|
+Roadster2|Ironmarch Collective #18|1121958742|67|Ironmarch Collective|humano||humano|KEM|
+Roadster2|Copperline Collective #19|-1156223040|68|Copperline Collective|humano||humano|SOL|
+Roadster2|Copperline Collective #20|1180556861|69|Copperline Collective|humano||humano|MAR|
+Roadster2|Solstice Collective #21|1121958742|70|Solstice Collective|humano||humano|NRV|
+Roadster2|Solstice Collective #22|-1156223040|71|Solstice Collective|humano||humano|ALD|
+Roadster2|Lowtide Collective #23|1180556861|72|Lowtide Collective|humano||humano|KEM|
+Roadster2|Lowtide Collective #24|1121958742|73|Lowtide Collective|humano||humano|SOL|
+Roadster2|Ravenhurst Collective #25|-1156223040|74|Ravenhurst Collective|humano||humano|MAR|
+Roadster2|Ravenhurst Collective #26|1180556861|75|Ravenhurst Collective|humano||humano|NRV|
+Roadster2|Amberfall Collective #27|1121958742|76|Amberfall Collective|humano||humano|ALD|
+Roadster2|Amberfall Collective #28|-1156223040|77|Amberfall Collective|humano||humano|KEM|
+Sport3|Amberfall Works #1|-1286184731|50|Amberfall Works|humano|Edran Ibbotson|humano|NRV|
+Sport3|Amberfall Works #2|-930722537|51|Amberfall Works|humano|Fenn Jarrow|humano|ALD|
+Sport3|Meridian Foundry #3|-164751788|52|Meridian Foundry|humano|Gero Kemble|humano|KEM|
+Sport3|Meridian Foundry #4|-1286184731|53|Meridian Foundry|humano|Hale Lorimer|humano|SOL|
+Sport3|Northgate Foundry #5|-930722537|54|Northgate Foundry|humano|Ivo Mowbray|humano|MAR|
+Sport3|Northgate Foundry #6|-164751788|55|Northgate Foundry|humano|Jory Naismith|humano|NRV|
+Sport3|Sablefield Foundry #7|-1286184731|56|Sablefield Foundry|humano|Kell Ockley|humano|ALD|
+Sport3|Sablefield Foundry #8|-930722537|57|Sablefield Foundry|humano|Lasse Prewitt|humano|KEM|
+Sport3|Verdant Foundry #9|-164751788|58|Verdant Foundry|humano|Mirko Abbot|humano|SOL|
+Sport3|Verdant Foundry #10|-1286184731|59|Verdant Foundry|humano|Nael Bragg|humano|MAR|
+Sport3|Kestrel Foundry #11|-930722537|60|Kestrel Foundry|humano|Osk Corliss|humano|NRV|
+Sport3|Kestrel Foundry #12|-164751788|61|Kestrel Foundry|humano|Piet Danforth|humano|ALD|
+Sport3|Halcyon Foundry #13|-1286184731|62|Halcyon Foundry|humano|Quill Ewart|humano|KEM|
+Sport3|Halcyon Foundry #14|-930722537|63|Halcyon Foundry|humano|Roan Fairbrass|humano|SOL|
+Sport3|Ironmarch Foundry #15|-164751788|64|Ironmarch Foundry|humano|Sten Gantry|humano|MAR|
+Sport3|Ironmarch Foundry #16|-1286184731|65|Ironmarch Foundry|humano|Tarn Havel|humano|NRV|
+Sport3|Copperline Foundry #17|-930722537|66|Copperline Foundry|humano|Aldo Ibbotson|humano|ALD|
+Sport3|Copperline Foundry #18|-164751788|67|Copperline Foundry|humano|Bram Jarrow|humano|KEM|
+Sport3|Solstice Foundry #19|-1286184731|68|Solstice Foundry|humano|Cato Kemble|humano|SOL|
+Sport3|Solstice Foundry #20|-930722537|69|Solstice Foundry|humano|Dara Lorimer|humano|MAR|
+Sport3|Lowtide Foundry #21|-164751788|70|Lowtide Foundry|humano|Edran Mowbray|humano|NRV|
+Sport3|Lowtide Foundry #22|-1286184731|71|Lowtide Foundry|humano|Fenn Naismith|humano|ALD|
+Sport3|Ravenhurst Foundry #23|-930722537|72|Ravenhurst Foundry|humano|Gero Ockley|humano|KEM|
+Sport3|Ravenhurst Foundry #24|-164751788|73|Ravenhurst Foundry|humano|Hale Prewitt|humano|SOL|
+Sport3|Amberfall Foundry #25|-1286184731|74|Amberfall Foundry|humano|Ivo Abbot|humano|MAR|
+Sport3|Amberfall Foundry #26|-930722537|75|Amberfall Foundry|humano|Jory Bragg|humano|NRV|
+Sport3|Meridian Collective #27|-164751788|76|Meridian Collective|humano|Kell Corliss|humano|ALD|
+Sport3|Meridian Collective #28|-1286184731|77|Meridian Collective|humano|Lasse Danforth|humano|KEM|
+Prototype5|Verdant Collective #1|-1676106225|50|Verdant Collective|humano|Fenn Kemble|humano|NRV|
+Prototype5|Verdant Collective #2|1205823095|51|Verdant Collective|humano|Gero Lorimer|humano|ALD|
+Prototype5|Kestrel Collective #3|128513974|52|Kestrel Collective|humano|Hale Mowbray|humano|KEM|
+Prototype5|Kestrel Collective #4|-1676106225|53|Kestrel Collective|humano|Ivo Naismith|humano|SOL|
+Prototype5|Halcyon Collective #5|1205823095|54|Halcyon Collective|humano|Jory Ockley|humano|MAR|
+Prototype5|Halcyon Collective #6|128513974|55|Halcyon Collective|humano|Kell Prewitt|humano|NRV|
+Prototype5|Ironmarch Collective #7|-1676106225|56|Ironmarch Collective|humano|Lasse Abbot|humano|ALD|
+Prototype5|Ironmarch Collective #8|1205823095|57|Ironmarch Collective|humano|Mirko Bragg|humano|KEM|
+Prototype5|Copperline Collective #9|128513974|58|Copperline Collective|humano|Nael Corliss|humano|SOL|
+Prototype5|Copperline Collective #10|-1676106225|59|Copperline Collective|humano|Osk Danforth|humano|MAR|
+Prototype5|Solstice Collective #11|1205823095|60|Solstice Collective|humano|Piet Ewart|humano|NRV|
+Prototype5|Solstice Collective #12|128513974|61|Solstice Collective|humano|Quill Fairbrass|humano|ALD|
+Prototype5|Lowtide Collective #13|-1676106225|62|Lowtide Collective|humano|Roan Gantry|humano|KEM|
+Prototype5|Lowtide Collective #14|1205823095|63|Lowtide Collective|humano|Sten Havel|humano|SOL|
+Prototype5|Ravenhurst Collective #15|128513974|64|Ravenhurst Collective|humano|Tarn Ibbotson|humano|MAR|
+Prototype5|Ravenhurst Collective #16|-1676106225|65|Ravenhurst Collective|humano|Aldo Jarrow|humano|NRV|
+Prototype5|Amberfall Collective #17|1205823095|66|Amberfall Collective|humano|Bram Kemble|humano|ALD|
+Prototype5|Amberfall Collective #18|128513974|67|Amberfall Collective|humano|Cato Lorimer|humano|KEM|
+Prototype5|Meridian Syndicate #19|-1676106225|68|Meridian Syndicate|humano|Dara Mowbray|humano|SOL|
+Prototype5|Meridian Syndicate #20|1205823095|69|Meridian Syndicate|humano|Edran Naismith|humano|MAR|
+Prototype5|Northgate Syndicate #21|128513974|70|Northgate Syndicate|humano|Fenn Ockley|humano|NRV|
+Prototype5|Northgate Syndicate #22|-1676106225|71|Northgate Syndicate|humano|Gero Prewitt|humano|ALD|
+Prototype5|Sablefield Syndicate #23|1205823095|72|Sablefield Syndicate|humano|Hale Abbot|humano|KEM|
+Prototype5|Sablefield Syndicate #24|128513974|73|Sablefield Syndicate|humano|Ivo Bragg|humano|SOL|
+Prototype5|Verdant Syndicate #25|-1676106225|74|Verdant Syndicate|humano|Jory Corliss|humano|MAR|
+Prototype5|Verdant Syndicate #26|1205823095|75|Verdant Syndicate|humano||humano|NRV|
+Prototype5|Kestrel Syndicate #27|128513974|76|Kestrel Syndicate|humano||humano|ALD|
+Prototype5|Kestrel Syndicate #28|-1676106225|77|Kestrel Syndicate|humano||humano|KEM|
+Openwheel2|Northgate Collective #1|-824480517|50|Northgate Collective|humano|Hale Ockley|humano|NRV|
+Openwheel2|Northgate Collective #2|650890761|51|Northgate Collective|humano|Ivo Prewitt|humano|ALD|
+Openwheel2|Sablefield Collective #3|1207005334|52|Sablefield Collective|humano|Jory Abbot|humano|KEM|
+Openwheel2|Sablefield Collective #4|-824480517|53|Sablefield Collective|humano|Kell Bragg|humano|SOL|
+Openwheel2|Verdant Collective #5|650890761|54|Verdant Collective|humano|Lasse Corliss|humano|MAR|
+Openwheel2|Verdant Collective #6|1207005334|55|Verdant Collective|humano|Mirko Danforth|humano|NRV|
+Openwheel2|Kestrel Collective #7|-824480517|56|Kestrel Collective|humano|Nael Ewart|humano|ALD|
+Openwheel2|Kestrel Collective #8|650890761|57|Kestrel Collective|humano|Osk Fairbrass|humano|KEM|
+Openwheel2|Halcyon Collective #9|1207005334|58|Halcyon Collective|humano|Piet Gantry|humano|SOL|
+Openwheel2|Halcyon Collective #10|-824480517|59|Halcyon Collective|humano|Quill Havel|humano|MAR|
+Openwheel2|Ironmarch Collective #11|650890761|60|Ironmarch Collective|humano|Roan Ibbotson|humano|NRV|
+Openwheel2|Ironmarch Collective #12|1207005334|61|Ironmarch Collective|humano|Sten Jarrow|humano|ALD|
+Openwheel2|Copperline Collective #13|-824480517|62|Copperline Collective|humano|Tarn Kemble|humano|KEM|
+Openwheel2|Copperline Collective #14|650890761|63|Copperline Collective|humano|Aldo Lorimer|humano|SOL|
+Openwheel2|Solstice Collective #15|1207005334|64|Solstice Collective|humano|Bram Mowbray|humano|MAR|
+Openwheel2|Solstice Collective #16|-824480517|65|Solstice Collective|humano|Cato Naismith|humano|NRV|
+Openwheel2|Lowtide Collective #17|650890761|66|Lowtide Collective|humano|Dara Ockley|humano|ALD|
+Openwheel2|Lowtide Collective #18|1207005334|67|Lowtide Collective|humano|Edran Prewitt|humano|KEM|
+Openwheel2|Ravenhurst Collective #19|-824480517|68|Ravenhurst Collective|humano||humano|SOL|
+Openwheel2|Ravenhurst Collective #20|650890761|69|Ravenhurst Collective|humano||humano|MAR|
+Openwheel2|Amberfall Collective #21|1207005334|70|Amberfall Collective|humano||humano|NRV|
+Openwheel2|Amberfall Collective #22|-824480517|71|Amberfall Collective|humano||humano|ALD|
+Openwheel2|Meridian Syndicate #23|650890761|72|Meridian Syndicate|humano||humano|KEM|
+Openwheel2|Meridian Syndicate #24|1207005334|73|Meridian Syndicate|humano||humano|SOL|
+Openwheel2|Northgate Syndicate #25|-824480517|74|Northgate Syndicate|humano||humano|MAR|
+Openwheel2|Northgate Syndicate #26|650890761|75|Northgate Syndicate|humano||humano|NRV|
+Openwheel2|Sablefield Syndicate #27|1207005334|76|Sablefield Syndicate|humano||humano|ALD|
+Openwheel2|Sablefield Syndicate #28|-824480517|77|Sablefield Syndicate|humano||humano|KEM|
+Roadster1|Lowtide Foundry #1|-1385047713|50|Lowtide Foundry|humano|Ivo Abbot|humano|NRV|
+Roadster1|Lowtide Foundry #2|-1264764847|51|Lowtide Foundry|humano|Jory Bragg|humano|ALD|
+Roadster1|Ravenhurst Foundry #3|1052217016|52|Ravenhurst Foundry|humano|Kell Corliss|humano|KEM|
+Roadster1|Ravenhurst Foundry #4|-1385047713|53|Ravenhurst Foundry|humano|Lasse Danforth|humano|SOL|
+Roadster1|Amberfall Foundry #5|-1264764847|54|Amberfall Foundry|humano|Mirko Ewart|humano|MAR|
+Roadster1|Amberfall Foundry #6|1052217016|55|Amberfall Foundry|humano|Nael Fairbrass|humano|NRV|
+Roadster1|Meridian Collective #7|-1385047713|56|Meridian Collective|humano|Osk Gantry|humano|ALD|
+Roadster1|Meridian Collective #8|-1264764847|57|Meridian Collective|humano|Piet Havel|humano|KEM|
+Roadster1|Northgate Collective #9|1052217016|58|Northgate Collective|humano|Quill Ibbotson|humano|SOL|
+Roadster1|Northgate Collective #10|-1385047713|59|Northgate Collective|humano|Roan Jarrow|humano|MAR|
+Roadster1|Sablefield Collective #11|-1264764847|60|Sablefield Collective|humano|Sten Kemble|humano|NRV|
+Roadster1|Sablefield Collective #12|1052217016|61|Sablefield Collective|humano|Tarn Lorimer|humano|ALD|
+Roadster1|Verdant Collective #13|-1385047713|62|Verdant Collective|humano|Aldo Mowbray|humano|KEM|
+Roadster1|Verdant Collective #14|-1264764847|63|Verdant Collective|humano|Bram Naismith|humano|SOL|
+Roadster1|Kestrel Collective #15|1052217016|64|Kestrel Collective|humano|Cato Ockley|humano|MAR|
+Roadster1|Kestrel Collective #16|-1385047713|65|Kestrel Collective|humano|Dara Prewitt|humano|NRV|
+Roadster1|Halcyon Collective #17|-1264764847|66|Halcyon Collective|humano|Edran Abbot|humano|ALD|
+Roadster1|Halcyon Collective #18|1052217016|67|Halcyon Collective|humano|Fenn Bragg|humano|KEM|
+Roadster1|Ironmarch Collective #19|-1385047713|68|Ironmarch Collective|humano||humano|SOL|
+Roadster1|Ironmarch Collective #20|-1264764847|69|Ironmarch Collective|humano||humano|MAR|
+Roadster1|Copperline Collective #21|1052217016|70|Copperline Collective|humano||humano|NRV|
+Roadster1|Copperline Collective #22|-1385047713|71|Copperline Collective|humano||humano|ALD|
+Roadster1|Solstice Collective #23|-1264764847|72|Solstice Collective|humano||humano|KEM|
+Roadster1|Solstice Collective #24|1052217016|73|Solstice Collective|humano||humano|SOL|
+Roadster1|Lowtide Collective #25|-1385047713|74|Lowtide Collective|humano||humano|MAR|
+Roadster1|Lowtide Collective #26|-1264764847|75|Lowtide Collective|humano||humano|NRV|
+Roadster1|Ravenhurst Collective #27|1052217016|76|Ravenhurst Collective|humano||humano|ALD|
+Roadster1|Ravenhurst Collective #28|-1385047713|77|Ravenhurst Collective|humano||humano|KEM|
+Sport2|Ravenhurst Works #1|308882747|50|Ravenhurst Works|humano|Jory Corliss|humano|NRV|
+Sport2|Ravenhurst Works #2|-1631997395|51|Ravenhurst Works|humano|Kell Danforth|humano|ALD|
+Sport2|Amberfall Works #3|1540533095|52|Amberfall Works|humano|Lasse Ewart|humano|KEM|
+Sport2|Amberfall Works #4|308882747|53|Amberfall Works|humano|Mirko Fairbrass|humano|SOL|
+Sport2|Meridian Foundry #5|-1631997395|54|Meridian Foundry|humano|Nael Gantry|humano|MAR|
+Sport2|Meridian Foundry #6|1540533095|55|Meridian Foundry|humano|Osk Havel|humano|NRV|
+Sport2|Northgate Foundry #7|308882747|56|Northgate Foundry|humano|Piet Ibbotson|humano|ALD|
+Sport2|Northgate Foundry #8|-1631997395|57|Northgate Foundry|humano|Quill Jarrow|humano|KEM|
+Sport2|Sablefield Foundry #9|1540533095|58|Sablefield Foundry|humano|Roan Kemble|humano|SOL|
+Sport2|Sablefield Foundry #10|308882747|59|Sablefield Foundry|humano|Sten Lorimer|humano|MAR|
+Sport2|Verdant Foundry #11|-1631997395|60|Verdant Foundry|humano|Tarn Mowbray|humano|NRV|
+Sport2|Verdant Foundry #12|1540533095|61|Verdant Foundry|humano|Aldo Naismith|humano|ALD|
+Sport2|Kestrel Foundry #13|308882747|62|Kestrel Foundry|humano|Bram Ockley|humano|KEM|
+Sport2|Kestrel Foundry #14|-1631997395|63|Kestrel Foundry|humano|Cato Prewitt|humano|SOL|
+Sport2|Halcyon Foundry #15|1540533095|64|Halcyon Foundry|humano|Dara Abbot|humano|MAR|
+Sport2|Halcyon Foundry #16|308882747|65|Halcyon Foundry|humano|Edran Bragg|humano|NRV|
+Sport2|Ironmarch Foundry #17|-1631997395|66|Ironmarch Foundry|humano||humano|ALD|
+Sport2|Ironmarch Foundry #18|1540533095|67|Ironmarch Foundry|humano||humano|KEM|
+Sport2|Copperline Foundry #19|308882747|68|Copperline Foundry|humano||humano|SOL|
+Sport2|Copperline Foundry #20|-1631997395|69|Copperline Foundry|humano||humano|MAR|
+Sport2|Solstice Foundry #21|1540533095|70|Solstice Foundry|humano||humano|NRV|
+Sport2|Solstice Foundry #22|308882747|71|Solstice Foundry|humano||humano|ALD|
+Sport2|Lowtide Foundry #23|-1631997395|72|Lowtide Foundry|humano||humano|KEM|
+Sport2|Lowtide Foundry #24|1540533095|73|Lowtide Foundry|humano||humano|SOL|
+Sport2|Ravenhurst Foundry #25|308882747|74|Ravenhurst Foundry|humano||humano|MAR|
+Sport2|Ravenhurst Foundry #26|-1631997395|75|Ravenhurst Foundry|humano||humano|NRV|
+Sport2|Amberfall Foundry #27|1540533095|76|Amberfall Foundry|humano||humano|ALD|
+Sport2|Amberfall Foundry #28|308882747|77|Amberfall Foundry|humano||humano|KEM|

@@ -1,0 +1,43 @@
+{
+  "name": "ams2-career",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "test": "vitest run",
+    "fake": "powershell -NoProfile -ExecutionPolicy Bypass -File ../tools/dev_fake.ps1",
+    "fake:real": "powershell -NoProfile -ExecutionPolicy Bypass -File ../tools/dev_fake.ps1 -Real",
+    "fake:panel": "powershell -NoProfile -ExecutionPolicy Bypass -File ../tools/dev_fake.ps1 -Panel",
+    "fake:real:panel": "powershell -NoProfile -ExecutionPolicy Bypass -File ../tools/dev_fake.ps1 -Real -Panel",
+    "fake:rebuild": "powershell -NoProfile -ExecutionPolicy Bypass -File ../tools/dev_fake.ps1 -Rebuild -Panel"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-opener": "^2",
+    "@tauri-apps/plugin-process": "^2.3.1",
+    "@tauri-apps/plugin-updater": "^2.10.1",
+    "driver.js": "^1.7.0",
+    "i18next": "^26.3.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-i18next": "^17.0.8"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@types/ws": "^8.18.1",
+    "@vitejs/plugin-react": "^4.6.0",
+    "jsdom": "^29.1.1",
+    "typescript": "~5.8.3",
+    "vite": "^7.0.4",
+    "vitest": "^4.1.10",
+    "ws": "^8.21.0"
+  }
+}

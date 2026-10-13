@@ -1,0 +1,7 @@
+<!-- Generated placeholder: this showcase does not publish the real project's brand artwork (see
+     the licence and README). A simple geometric mark stands in for it; nothing here traces or
+     approximates the original design. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <rect x="2" y="2" width="44" height="44" rx="10" fill="#14161b" fill-opacity="1"/>
+  <path d="M24 12 L36 32 L28 32 L24 24 L20 32 L12 32 Z" fill="#e0483a"/>
+</svg>

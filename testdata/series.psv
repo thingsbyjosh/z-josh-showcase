@@ -1,0 +1,13 @@
+# series_id|class_name|display|region|era|profile_id|points_id|rounds|branch_of|level|kind|unlocks|gate_top|gate_feeder_class|gate_feeder_top
+sablefield_openwheel|Openwheel1|Sablefield Openwheel Challenge|INT|2012|1|compact|9||1|champ|kestrel_sport|1||
+solstice_roadster|Roadster1|Solstice Roadster Championship|INT|2012|1|compact|9||1|champ|lowtide_sport|2||
+verdant_roadster|Roadster2|Verdant Roadster Series|INT|1985|2|compact|12||2|champ||||
+copperline_openwheel|Openwheel2|Copperline Openwheel Championship|INT|1998|2|compact|7||2|champ|meridian_prototype|1||
+lowtide_sport|Sport2|Lowtide Sport Trophy|INT|2012|2|compact|12||2|champ|||Roadster1|2
+kestrel_sport|Sport3|Kestrel Sport Cup|INT|2024|3|compact|7||3|champ|ironmarch_tourer|2|Openwheel1|1
+meridian_prototype|Prototype4|Meridian Prototype Cup|INT|1985|4|standard|6||4|champ|ironmarch_tourer|3|Openwheel2|1
+ravenhurst_prototype|Prototype4|Ravenhurst Prototype Series|INT|1998|4|standard|9||4|champ|amberfall_tourer|2||
+northgate_tourer|Tourer5|Northgate Tourer Championship|INT|1985|5|standard|12||5|champ||||
+halcyon_prototype|Prototype5|Halcyon Prototype Trophy|INT|1998|5|standard|7||5|champ||||
+ironmarch_tourer|Tourer5|Ironmarch Tourer Trophy|INT|2024|5|standard|7||5|champ|||Prototype4|3
+amberfall_tourer|Tourer5|Amberfall Tourer Series|INT|2024|5|standard|10||5|champ|||Prototype4|2

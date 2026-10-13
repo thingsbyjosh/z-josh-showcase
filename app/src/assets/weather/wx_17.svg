@@ -1,0 +1,13 @@
+<!-- Generated placeholder: this showcase does not publish the real photograph AMS2 itself shows
+     for this weather condition (extracted from the game's own installation; see weatherImages.ts's
+     own comment, and the licence/README). A simple flat-colour drawing stands in for it. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect x="14" y="14" width="36" height="36" rx="7" fill="#e8ebef" stroke="#9aa4b2" stroke-width="2"/>
+  <g fill="#262b33">
+    <circle cx="23" cy="23" r="3.4"/>
+    <circle cx="41" cy="23" r="3.4"/>
+    <circle cx="32" cy="32" r="3.4"/>
+    <circle cx="23" cy="41" r="3.4"/>
+    <circle cx="41" cy="41" r="3.4"/>
+  </g>
+</svg>

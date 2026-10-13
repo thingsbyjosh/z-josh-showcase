@@ -1,0 +1,89 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+jobs:
+  # This engine is a Windows product, so it is compiled the way it already builds every day: MSVC on a
+  # Windows runner, not a Linux one. AMS2_PUBLIC_EXPORT_BUILD is the only thing that differs from a
+  # local build: it excludes a handful of tests that link against sources this repository does not
+  # publish (a socket-transport test harness and a game-catalogue check, neither of which apply here).
+  # /bigobj: the TESTDATA(...) macro expands each of tools/testdata.h's ~760 call sites into real code
+  # (a std::string construction plus a getenv call), which pushes career_test.cpp's single object file
+  # past the COFF section limit on its own -- see tools/export_public/dump_fixtures.py's own comment on
+  # the identical flag it needs to compile the same file.
+  engine:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ilammy/msvc-dev-cmd@v1
+      # Every engine source except career_data.cpp. That file holds the UI's sample tables and the
+      # loaders the browser build uses (engine-wasm/ compiles it); the harness uses nothing from it, and
+      # it calls four owned-car accessors that this repository defines only for the browser build
+      # (engine-wasm/owned_wasm.cpp), so linking it here would leave them unresolved.
+      - name: Compile the public engine subset
+        shell: pwsh
+        run: |
+          $srcs = Get-ChildItem dll\career\*.cpp | Where-Object Name -ne 'career_data.cpp' | ForEach-Object { "dll\career\$($_.Name)" }
+          cl /nologo /O2 /MT /EHsc /std:c++17 /bigobj /D AMS2_PUBLIC_EXPORT_BUILD $srcs tools\career_test.cpp /Fe:career_test.exe
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      # A number of surviving tests write scratch save/log files to a relative build\... path (their
+      # own scratch output, never an input), and SaveCareer does not create the parent directory it
+      # writes into -- a fresh checkout has no build\ at all. Creating it once, up front, is cheaper
+      # and more honest than excising every test that happens to use it as scratch space.
+      - name: Create the scratch directory some tests write to
+        shell: cmd
+        run: if not exist build mkdir build
+      - name: Run the harness (exit code is the failure count)
+        shell: cmd
+        run: career_test.exe
+  app:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "22", cache: npm, cache-dependency-path: app/package-lock.json }
+      - run: npm ci
+        working-directory: app
+      - run: npx vitest run
+        working-directory: app
+  # The WebAssembly build lives HERE, in the public repository's CI, compiling the public
+  # repository's own sources. That is not a convenience. It is what makes the published binary
+  # unable to contain anything that was not already published: there is nothing else here for it
+  # to compile. A build run anywhere else would be a promise; this is an impossibility.
+  #
+  # Build AND run. Linking proves nothing on its own: every fidelity defect the browser host
+  # shipped in its first round -- a localized label in a field the app dereferences as a lookup
+  # key, band arithmetic derived from the wrong constant, a career born on the day the engine
+  # documents as wrong -- compiled and linked perfectly. Only asking the engine a question finds
+  # those, so the last step runs the dispatch test. Both scripts default to the same output
+  # directory, so neither needs an argument here.
+  wasm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Pinned, not floating. engine-wasm/wasm_main.cpp carries a static_assert on sizeof(HubView),
+      # and a structure's size is a property of the toolchain that lays it out: an unpinned action
+      # would silently move to whatever Emscripten ships next, and the first symptom would be that
+      # assertion firing on a commit that changed nothing. 6.0.9 is the version the 248 was measured
+      # with. Moving it is a deliberate act: bump this, re-measure, then update the number there.
+      - uses: mymindstorm/setup-emsdk@v14
+        with: { version: "6.0.9" }
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      # engine-wasm/paths_wasm.cpp is the one genuine port in this directory -- the Win32 filesystem
+      # layer rewritten against POSIX -- and it is where the only critical defect of that work hid.
+      # Its test exercises all 24 non-inline symbols paths.h declares, and it needs no Emscripten at
+      # all: plain g++ compiles both files, because the port is ordinary POSIX C++. It carries its
+      # own main(), so it is never part of the module below. Run FIRST: when it fails, it says which
+      # filesystem call broke, which the module link cannot.
+      - name: Compile and run the filesystem port's own test
+        run: |
+          g++ -std=c++17 -iquote dll/career -o /tmp/test_paths_wasm \
+            engine-wasm/test_paths_wasm.cpp engine-wasm/paths_wasm.cpp
+          /tmp/test_paths_wasm
+      - name: Compile the engine to WebAssembly
+        run: bash engine-wasm/build_wasm.sh
+      - name: The engine must ANSWER, not just link
+        run: node engine-wasm/test_dispatch.mjs

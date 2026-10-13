@@ -1,0 +1,14 @@
+node_id|display|discipline|level|tier|prereqs|classes|note|dlc|pack|vehid
+sablefield_openwheel|Sablefield Openwheel Challenge|single|1|rookie||Openwheel1||base||963980994
+solstice_roadster|Solstice Roadster Championship|single|1|rookie||Roadster1||base||-1385047713
+verdant_roadster|Verdant Roadster Series|single|2|rookie|sablefield_openwheel|Roadster2||base||-1156223040
+copperline_openwheel|Copperline Openwheel Championship|single|2|rookie|sablefield_openwheel|Openwheel2||base||-824480517
+lowtide_sport|Lowtide Sport Trophy|single|2|rookie|solstice_roadster|Sport2||base||308882747
+kestrel_sport|Kestrel Sport Cup|single|3|semipro|sablefield_openwheel|Sport3||base||-1286184731
+meridian_prototype|Meridian Prototype Cup|endurance|4|semipro|copperline_openwheel|Prototype4||base||-1974044939
+ravenhurst_prototype|Ravenhurst Prototype Series|endurance|4|semipro|solstice_roadster|Prototype4||base||-1974044939
+northgate_tourer|Northgate Tourer Championship|single|5|pro|lowtide_sport|Tourer5||base||1518017897
+halcyon_prototype|Halcyon Prototype Trophy|endurance|5|pro|solstice_roadster|Prototype5||base||-1676106225
+ironmarch_tourer|Ironmarch Tourer Trophy|single|5|pro|meridian_prototype,kestrel_sport|Tourer5||base||1518017897
+amberfall_tourer|Amberfall Tourer Series|single|5|pro|ravenhurst_prototype|Tourer5||base||1518017897
+meridian_addon|Meridian Sport Masters|single|6|pro|ironmarch_tourer|Sport6||dlc||0

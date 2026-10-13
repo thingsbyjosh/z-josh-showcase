@@ -1,0 +1,14 @@
+# synthetic series economy
+node_id|phase|disc|comprar|alquiler|entry|premio_gan|model|icon|classes|champion
+meridian_prototype|4|endurance|320000|10666|5333|40000|sponsor||Prototype4|
+northgate_tourer|5|single|500000|16666|8333|62500|factory||Tourer5|
+sablefield_openwheel|1|single|20000|666|333|2500|pocket||Openwheel1|
+verdant_roadster|2|single|80000|2666|1333|10000|pocket||Roadster2|
+kestrel_sport|3|single|180000|6000|3000|22500|sponsor||Sport3|
+halcyon_prototype|5|endurance|500000|16666|8333|62500|factory||Prototype5|
+ironmarch_tourer|5|single|500000|16666|8333|62500|factory||Tourer5|
+copperline_openwheel|2|single|80000|2666|1333|10000|pocket||Openwheel2|
+solstice_roadster|1|single|20000|666|333|2500|pocket||Roadster1|
+lowtide_sport|2|single|80000|2666|1333|10000|pocket||Sport2|
+ravenhurst_prototype|4|endurance|320000|10666|5333|40000|sponsor||Prototype4|
+amberfall_tourer|5|single|500000|16666|8333|62500|factory||Tourer5|

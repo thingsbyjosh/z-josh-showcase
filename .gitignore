@@ -1,0 +1,28 @@
+# Build output. Everything below is produced by the commands this repository's own CI runs, so it is
+# reproducible from source and does not belong in history.
+
+# The WebAssembly build. engine-wasm/build_wasm.sh writes its three output files into the app's
+# public directory (that is where the page loads them from), and together they are about a megabyte
+# of binary. Without this line the first person to build and then `git add -A` commits all of it.
+app/public/engine/engine.mjs
+app/public/engine/engine.wasm
+app/public/engine/engine.data
+
+# The native engine build (MSVC on Windows) and the scratch directory a handful of its tests write
+# their own save/log files into.
+*.obj
+*.exe
+*.pdb
+*.ilk
+build/
+
+# The app: dependencies and the Vite bundle.
+node_modules/
+app/dist/
+app/node_modules/
+
+# Editor and OS leftovers.
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,253 @@
+# class_name|livery_name|real_team|car_number|driver|confidence
+Prototype4|Sablefield Collective #1|Sablefield Collective|1|Aldo Abbot|curado
+Prototype4|Sablefield Collective #2|Sablefield Collective|2|Bram Bragg|curado
+Prototype4|Verdant Collective #3|Verdant Collective|3|Cato Corliss|curado
+Prototype4|Verdant Collective #4|Verdant Collective|4|Dara Danforth|curado
+Prototype4|Kestrel Collective #5|Kestrel Collective|5|Edran Ewart|curado
+Prototype4|Kestrel Collective #6|Kestrel Collective|6|Fenn Fairbrass|curado
+Prototype4|Halcyon Collective #7|Halcyon Collective|7|Gero Gantry|curado
+Prototype4|Halcyon Collective #8|Halcyon Collective|8|Hale Havel|curado
+Prototype4|Ironmarch Collective #9|Ironmarch Collective|9|Ivo Ibbotson|curado
+Prototype4|Ironmarch Collective #10|Ironmarch Collective|10|Jory Jarrow|curado
+Prototype4|Copperline Collective #11|Copperline Collective|11|Kell Kemble|curado
+Prototype4|Copperline Collective #12|Copperline Collective|12|Lasse Lorimer|curado
+Prototype4|Solstice Collective #13|Solstice Collective|13|Mirko Mowbray|curado
+Prototype4|Solstice Collective #14|Solstice Collective|14|Nael Naismith|curado
+Prototype4|Lowtide Collective #15|Lowtide Collective|15|Osk Ockley|curado
+Prototype4|Lowtide Collective #16|Lowtide Collective|16|Piet Prewitt|curado
+Prototype4|Ravenhurst Collective #17|Ravenhurst Collective|17|Quill Abbot|curado
+Prototype4|Ravenhurst Collective #18|Ravenhurst Collective|18|Roan Bragg|curado
+Prototype4|Amberfall Collective #19|Amberfall Collective|19|Sten Corliss|curado
+Prototype4|Amberfall Collective #20|Amberfall Collective|20|Tarn Danforth|curado
+Prototype4|Meridian Syndicate #21|Meridian Syndicate|21|Aldo Ewart|curado
+Prototype4|Meridian Syndicate #22|Meridian Syndicate|22|Bram Fairbrass|curado
+Prototype4|Northgate Syndicate #23|Northgate Syndicate|23|Cato Gantry|curado
+Prototype4|Northgate Syndicate #24|Northgate Syndicate|24|Dara Havel|curado
+Prototype4|Sablefield Syndicate #25|Sablefield Syndicate|25|Edran Ibbotson|curado
+Prototype4|Sablefield Syndicate #26|Sablefield Syndicate|26|Piet Naismith|curado
+Prototype4|Verdant Syndicate #27|Verdant Syndicate|27||curado
+Prototype4|Verdant Syndicate #28|Verdant Syndicate|28||curado
+Tourer5|Ravenhurst Foundry #1|Ravenhurst Foundry|1|Bram Corliss|curado
+Tourer5|Ravenhurst Foundry #2|Ravenhurst Foundry|2|Cato Danforth|curado
+Tourer5|Amberfall Foundry #3|Amberfall Foundry|3|Dara Ewart|curado
+Tourer5|Amberfall Foundry #4|Amberfall Foundry|4|Edran Fairbrass|curado
+Tourer5|Meridian Collective #5|Meridian Collective|5|Fenn Gantry|curado
+Tourer5|Meridian Collective #6|Meridian Collective|6|Gero Havel|curado
+Tourer5|Northgate Collective #7|Northgate Collective|7|Hale Ibbotson|curado
+Tourer5|Northgate Collective #8|Northgate Collective|8|Ivo Jarrow|curado
+Tourer5|Sablefield Collective #9|Sablefield Collective|9|Jory Kemble|curado
+Tourer5|Sablefield Collective #10|Sablefield Collective|10|Kell Lorimer|curado
+Tourer5|Verdant Collective #11|Verdant Collective|11|Lasse Mowbray|curado
+Tourer5|Verdant Collective #12|Verdant Collective|12|Mirko Naismith|curado
+Tourer5|Kestrel Collective #13|Kestrel Collective|13|Nael Ockley|curado
+Tourer5|Kestrel Collective #14|Kestrel Collective|14|Osk Prewitt|curado
+Tourer5|Halcyon Collective #15|Halcyon Collective|15|Piet Abbot|curado
+Tourer5|Halcyon Collective #16|Halcyon Collective|16|Quill Bragg|curado
+Tourer5|Ironmarch Collective #17|Ironmarch Collective|17|Roan Corliss|curado
+Tourer5|Ironmarch Collective #18|Ironmarch Collective|18|Sten Danforth|curado
+Tourer5|Copperline Collective #19|Copperline Collective|19|Tarn Ewart|curado
+Tourer5|Copperline Collective #20|Copperline Collective|20|Fenn Prewitt|curado
+Tourer5|Solstice Collective #21|Solstice Collective|21|Gero Abbot|curado
+Tourer5|Solstice Collective #22|Solstice Collective|22|Hale Bragg|curado
+Tourer5|Lowtide Collective #23|Lowtide Collective|23|Ivo Corliss|curado
+Tourer5|Lowtide Collective #24|Lowtide Collective|24|Jory Danforth|curado
+Tourer5|Ravenhurst Collective #25|Ravenhurst Collective|25||curado
+Tourer5|Ravenhurst Collective #26|Ravenhurst Collective|26||curado
+Tourer5|Amberfall Collective #27|Amberfall Collective|27||curado
+Tourer5|Amberfall Collective #28|Amberfall Collective|28||curado
+Openwheel1|Meridian Collective #1|Meridian Collective|1|Cato Ewart|curado
+Openwheel1|Meridian Collective #2|Meridian Collective|2|Dara Fairbrass|curado
+Openwheel1|Northgate Collective #3|Northgate Collective|3|Edran Gantry|curado
+Openwheel1|Northgate Collective #4|Northgate Collective|4|Fenn Havel|curado
+Openwheel1|Sablefield Collective #5|Sablefield Collective|5|Gero Ibbotson|curado
+Openwheel1|Sablefield Collective #6|Sablefield Collective|6|Hale Jarrow|curado
+Openwheel1|Verdant Collective #7|Verdant Collective|7|Ivo Kemble|curado
+Openwheel1|Verdant Collective #8|Verdant Collective|8|Jory Lorimer|curado
+Openwheel1|Kestrel Collective #9|Kestrel Collective|9|Kell Mowbray|curado
+Openwheel1|Kestrel Collective #10|Kestrel Collective|10|Lasse Naismith|curado
+Openwheel1|Halcyon Collective #11|Halcyon Collective|11|Mirko Ockley|curado
+Openwheel1|Halcyon Collective #12|Halcyon Collective|12|Nael Prewitt|curado
+Openwheel1|Ironmarch Collective #13|Ironmarch Collective|13|Osk Abbot|curado
+Openwheel1|Ironmarch Collective #14|Ironmarch Collective|14|Piet Bragg|curado
+Openwheel1|Copperline Collective #15|Copperline Collective|15|Quill Corliss|curado
+Openwheel1|Copperline Collective #16|Copperline Collective|16|Roan Danforth|curado
+Openwheel1|Solstice Collective #17|Solstice Collective|17|Sten Ewart|curado
+Openwheel1|Solstice Collective #18|Solstice Collective|18|Tarn Fairbrass|curado
+Openwheel1|Lowtide Collective #19|Lowtide Collective|19|Aldo Gantry|curado
+Openwheel1|Lowtide Collective #20|Lowtide Collective|20|Bram Havel|curado
+Openwheel1|Ravenhurst Collective #21|Ravenhurst Collective|21|Cato Ibbotson|curado
+Openwheel1|Ravenhurst Collective #22|Ravenhurst Collective|22|Dara Jarrow|curado
+Openwheel1|Amberfall Collective #23|Amberfall Collective|23|Edran Kemble|curado
+Openwheel1|Amberfall Collective #24|Amberfall Collective|24|Fenn Lorimer|curado
+Openwheel1|Meridian Syndicate #25|Meridian Syndicate|25|Gero Mowbray|curado
+Openwheel1|Meridian Syndicate #26|Meridian Syndicate|26|Hale Naismith|curado
+Openwheel1|Northgate Syndicate #27|Northgate Syndicate|27|Ivo Ockley|curado
+Openwheel1|Northgate Syndicate #28|Northgate Syndicate|28||curado
+Roadster2|Ravenhurst Foundry #1|Ravenhurst Foundry|1|Dara Gantry|curado
+Roadster2|Ravenhurst Foundry #2|Ravenhurst Foundry|2|Edran Havel|curado
+Roadster2|Amberfall Foundry #3|Amberfall Foundry|3|Fenn Ibbotson|curado
+Roadster2|Amberfall Foundry #4|Amberfall Foundry|4|Gero Jarrow|curado
+Roadster2|Meridian Collective #5|Meridian Collective|5|Hale Kemble|curado
+Roadster2|Meridian Collective #6|Meridian Collective|6|Ivo Lorimer|curado
+Roadster2|Northgate Collective #7|Northgate Collective|7|Jory Mowbray|curado
+Roadster2|Northgate Collective #8|Northgate Collective|8|Kell Naismith|curado
+Roadster2|Sablefield Collective #9|Sablefield Collective|9|Lasse Ockley|curado
+Roadster2|Sablefield Collective #10|Sablefield Collective|10|Mirko Prewitt|curado
+Roadster2|Verdant Collective #11|Verdant Collective|11|Nael Abbot|curado
+Roadster2|Verdant Collective #12|Verdant Collective|12|Osk Bragg|curado
+Roadster2|Kestrel Collective #13|Kestrel Collective|13|Piet Corliss|curado
+Roadster2|Kestrel Collective #14|Kestrel Collective|14|Quill Danforth|curado
+Roadster2|Halcyon Collective #15|Halcyon Collective|15|Roan Ewart|curado
+Roadster2|Halcyon Collective #16|Halcyon Collective|16|Sten Fairbrass|curado
+Roadster2|Ironmarch Collective #17|Ironmarch Collective|17|Tarn Gantry|curado
+Roadster2|Ironmarch Collective #18|Ironmarch Collective|18||curado
+Roadster2|Copperline Collective #19|Copperline Collective|19||curado
+Roadster2|Copperline Collective #20|Copperline Collective|20||curado
+Roadster2|Solstice Collective #21|Solstice Collective|21||curado
+Roadster2|Solstice Collective #22|Solstice Collective|22||curado
+Roadster2|Lowtide Collective #23|Lowtide Collective|23||curado
+Roadster2|Lowtide Collective #24|Lowtide Collective|24||curado
+Roadster2|Ravenhurst Collective #25|Ravenhurst Collective|25||curado
+Roadster2|Ravenhurst Collective #26|Ravenhurst Collective|26||curado
+Roadster2|Amberfall Collective #27|Amberfall Collective|27||curado
+Roadster2|Amberfall Collective #28|Amberfall Collective|28||curado
+Sport3|Amberfall Works #1|Amberfall Works|1|Edran Ibbotson|curado
+Sport3|Amberfall Works #2|Amberfall Works|2|Fenn Jarrow|curado
+Sport3|Meridian Foundry #3|Meridian Foundry|3|Gero Kemble|curado
+Sport3|Meridian Foundry #4|Meridian Foundry|4|Hale Lorimer|curado
+Sport3|Northgate Foundry #5|Northgate Foundry|5|Ivo Mowbray|curado
+Sport3|Northgate Foundry #6|Northgate Foundry|6|Jory Naismith|curado
+Sport3|Sablefield Foundry #7|Sablefield Foundry|7|Kell Ockley|curado
+Sport3|Sablefield Foundry #8|Sablefield Foundry|8|Lasse Prewitt|curado
+Sport3|Verdant Foundry #9|Verdant Foundry|9|Mirko Abbot|curado
+Sport3|Verdant Foundry #10|Verdant Foundry|10|Nael Bragg|curado
+Sport3|Kestrel Foundry #11|Kestrel Foundry|11|Osk Corliss|curado
+Sport3|Kestrel Foundry #12|Kestrel Foundry|12|Piet Danforth|curado
+Sport3|Halcyon Foundry #13|Halcyon Foundry|13|Quill Ewart|curado
+Sport3|Halcyon Foundry #14|Halcyon Foundry|14|Roan Fairbrass|curado
+Sport3|Ironmarch Foundry #15|Ironmarch Foundry|15|Sten Gantry|curado
+Sport3|Ironmarch Foundry #16|Ironmarch Foundry|16|Tarn Havel|curado
+Sport3|Copperline Foundry #17|Copperline Foundry|17|Aldo Ibbotson|curado
+Sport3|Copperline Foundry #18|Copperline Foundry|18|Bram Jarrow|curado
+Sport3|Solstice Foundry #19|Solstice Foundry|19|Cato Kemble|curado
+Sport3|Solstice Foundry #20|Solstice Foundry|20|Dara Lorimer|curado
+Sport3|Lowtide Foundry #21|Lowtide Foundry|21|Edran Mowbray|curado
+Sport3|Lowtide Foundry #22|Lowtide Foundry|22|Fenn Naismith|curado
+Sport3|Ravenhurst Foundry #23|Ravenhurst Foundry|23|Gero Ockley|curado
+Sport3|Ravenhurst Foundry #24|Ravenhurst Foundry|24|Hale Prewitt|curado
+Sport3|Amberfall Foundry #25|Amberfall Foundry|25|Ivo Abbot|curado
+Sport3|Amberfall Foundry #26|Amberfall Foundry|26|Jory Bragg|curado
+Sport3|Meridian Collective #27|Meridian Collective|27|Kell Corliss|curado
+Sport3|Meridian Collective #28|Meridian Collective|28|Lasse Danforth|curado
+Prototype5|Verdant Collective #1|Verdant Collective|1|Fenn Kemble|curado
+Prototype5|Verdant Collective #2|Verdant Collective|2|Gero Lorimer|curado
+Prototype5|Kestrel Collective #3|Kestrel Collective|3|Hale Mowbray|curado
+Prototype5|Kestrel Collective #4|Kestrel Collective|4|Ivo Naismith|curado
+Prototype5|Halcyon Collective #5|Halcyon Collective|5|Jory Ockley|curado
+Prototype5|Halcyon Collective #6|Halcyon Collective|6|Kell Prewitt|curado
+Prototype5|Ironmarch Collective #7|Ironmarch Collective|7|Lasse Abbot|curado
+Prototype5|Ironmarch Collective #8|Ironmarch Collective|8|Mirko Bragg|curado
+Prototype5|Copperline Collective #9|Copperline Collective|9|Nael Corliss|curado
+Prototype5|Copperline Collective #10|Copperline Collective|10|Osk Danforth|curado
+Prototype5|Solstice Collective #11|Solstice Collective|11|Piet Ewart|curado
+Prototype5|Solstice Collective #12|Solstice Collective|12|Quill Fairbrass|curado
+Prototype5|Lowtide Collective #13|Lowtide Collective|13|Roan Gantry|curado
+Prototype5|Lowtide Collective #14|Lowtide Collective|14|Sten Havel|curado
+Prototype5|Ravenhurst Collective #15|Ravenhurst Collective|15|Tarn Ibbotson|curado
+Prototype5|Ravenhurst Collective #16|Ravenhurst Collective|16|Aldo Jarrow|curado
+Prototype5|Amberfall Collective #17|Amberfall Collective|17|Bram Kemble|curado
+Prototype5|Amberfall Collective #18|Amberfall Collective|18|Cato Lorimer|curado
+Prototype5|Meridian Syndicate #19|Meridian Syndicate|19|Dara Mowbray|curado
+Prototype5|Meridian Syndicate #20|Meridian Syndicate|20|Edran Naismith|curado
+Prototype5|Northgate Syndicate #21|Northgate Syndicate|21|Fenn Ockley|curado
+Prototype5|Northgate Syndicate #22|Northgate Syndicate|22|Gero Prewitt|curado
+Prototype5|Sablefield Syndicate #23|Sablefield Syndicate|23|Hale Abbot|curado
+Prototype5|Sablefield Syndicate #24|Sablefield Syndicate|24|Ivo Bragg|curado
+Prototype5|Verdant Syndicate #25|Verdant Syndicate|25|Jory Corliss|curado
+Prototype5|Verdant Syndicate #26|Verdant Syndicate|26||curado
+Prototype5|Kestrel Syndicate #27|Kestrel Syndicate|27||curado
+Prototype5|Kestrel Syndicate #28|Kestrel Syndicate|28||curado
+Openwheel2|Northgate Collective #1|Northgate Collective|1|Hale Ockley|curado
+Openwheel2|Northgate Collective #2|Northgate Collective|2|Ivo Prewitt|curado
+Openwheel2|Sablefield Collective #3|Sablefield Collective|3|Jory Abbot|curado
+Openwheel2|Sablefield Collective #4|Sablefield Collective|4|Kell Bragg|curado
+Openwheel2|Verdant Collective #5|Verdant Collective|5|Lasse Corliss|curado
+Openwheel2|Verdant Collective #6|Verdant Collective|6|Mirko Danforth|curado
+Openwheel2|Kestrel Collective #7|Kestrel Collective|7|Nael Ewart|curado
+Openwheel2|Kestrel Collective #8|Kestrel Collective|8|Osk Fairbrass|curado
+Openwheel2|Halcyon Collective #9|Halcyon Collective|9|Piet Gantry|curado
+Openwheel2|Halcyon Collective #10|Halcyon Collective|10|Quill Havel|curado
+Openwheel2|Ironmarch Collective #11|Ironmarch Collective|11|Roan Ibbotson|curado
+Openwheel2|Ironmarch Collective #12|Ironmarch Collective|12|Sten Jarrow|curado
+Openwheel2|Copperline Collective #13|Copperline Collective|13|Tarn Kemble|curado
+Openwheel2|Copperline Collective #14|Copperline Collective|14|Aldo Lorimer|curado
+Openwheel2|Solstice Collective #15|Solstice Collective|15|Bram Mowbray|curado
+Openwheel2|Solstice Collective #16|Solstice Collective|16|Cato Naismith|curado
+Openwheel2|Lowtide Collective #17|Lowtide Collective|17|Dara Ockley|curado
+Openwheel2|Lowtide Collective #18|Lowtide Collective|18|Edran Prewitt|curado
+Openwheel2|Ravenhurst Collective #19|Ravenhurst Collective|19||curado
+Openwheel2|Ravenhurst Collective #20|Ravenhurst Collective|20||curado
+Openwheel2|Amberfall Collective #21|Amberfall Collective|21||curado
+Openwheel2|Amberfall Collective #22|Amberfall Collective|22||curado
+Openwheel2|Meridian Syndicate #23|Meridian Syndicate|23||curado
+Openwheel2|Meridian Syndicate #24|Meridian Syndicate|24||curado
+Openwheel2|Northgate Syndicate #25|Northgate Syndicate|25||curado
+Openwheel2|Northgate Syndicate #26|Northgate Syndicate|26||curado
+Openwheel2|Sablefield Syndicate #27|Sablefield Syndicate|27||curado
+Openwheel2|Sablefield Syndicate #28|Sablefield Syndicate|28||curado
+Roadster1|Lowtide Foundry #1|Lowtide Foundry|1|Ivo Abbot|curado
+Roadster1|Lowtide Foundry #2|Lowtide Foundry|2|Jory Bragg|curado
+Roadster1|Ravenhurst Foundry #3|Ravenhurst Foundry|3|Kell Corliss|curado
+Roadster1|Ravenhurst Foundry #4|Ravenhurst Foundry|4|Lasse Danforth|curado
+Roadster1|Amberfall Foundry #5|Amberfall Foundry|5|Mirko Ewart|curado
+Roadster1|Amberfall Foundry #6|Amberfall Foundry|6|Nael Fairbrass|curado
+Roadster1|Meridian Collective #7|Meridian Collective|7|Osk Gantry|curado
+Roadster1|Meridian Collective #8|Meridian Collective|8|Piet Havel|curado
+Roadster1|Northgate Collective #9|Northgate Collective|9|Quill Ibbotson|curado
+Roadster1|Northgate Collective #10|Northgate Collective|10|Roan Jarrow|curado
+Roadster1|Sablefield Collective #11|Sablefield Collective|11|Sten Kemble|curado
+Roadster1|Sablefield Collective #12|Sablefield Collective|12|Tarn Lorimer|curado
+Roadster1|Verdant Collective #13|Verdant Collective|13|Aldo Mowbray|curado
+Roadster1|Verdant Collective #14|Verdant Collective|14|Bram Naismith|curado
+Roadster1|Kestrel Collective #15|Kestrel Collective|15|Cato Ockley|curado
+Roadster1|Kestrel Collective #16|Kestrel Collective|16|Dara Prewitt|curado
+Roadster1|Halcyon Collective #17|Halcyon Collective|17|Edran Abbot|curado
+Roadster1|Halcyon Collective #18|Halcyon Collective|18|Fenn Bragg|curado
+Roadster1|Ironmarch Collective #19|Ironmarch Collective|19||curado
+Roadster1|Ironmarch Collective #20|Ironmarch Collective|20||curado
+Roadster1|Copperline Collective #21|Copperline Collective|21||curado
+Roadster1|Copperline Collective #22|Copperline Collective|22||curado
+Roadster1|Solstice Collective #23|Solstice Collective|23||curado
+Roadster1|Solstice Collective #24|Solstice Collective|24||curado
+Roadster1|Lowtide Collective #25|Lowtide Collective|25||curado
+Roadster1|Lowtide Collective #26|Lowtide Collective|26||curado
+Roadster1|Ravenhurst Collective #27|Ravenhurst Collective|27||curado
+Roadster1|Ravenhurst Collective #28|Ravenhurst Collective|28||curado
+Sport2|Ravenhurst Works #1|Ravenhurst Works|1|Jory Corliss|curado
+Sport2|Ravenhurst Works #2|Ravenhurst Works|2|Kell Danforth|curado
+Sport2|Amberfall Works #3|Amberfall Works|3|Lasse Ewart|curado
+Sport2|Amberfall Works #4|Amberfall Works|4|Mirko Fairbrass|curado
+Sport2|Meridian Foundry #5|Meridian Foundry|5|Nael Gantry|curado
+Sport2|Meridian Foundry #6|Meridian Foundry|6|Osk Havel|curado
+Sport2|Northgate Foundry #7|Northgate Foundry|7|Piet Ibbotson|curado
+Sport2|Northgate Foundry #8|Northgate Foundry|8|Quill Jarrow|curado
+Sport2|Sablefield Foundry #9|Sablefield Foundry|9|Roan Kemble|curado
+Sport2|Sablefield Foundry #10|Sablefield Foundry|10|Sten Lorimer|curado
+Sport2|Verdant Foundry #11|Verdant Foundry|11|Tarn Mowbray|curado
+Sport2|Verdant Foundry #12|Verdant Foundry|12|Aldo Naismith|curado
+Sport2|Kestrel Foundry #13|Kestrel Foundry|13|Bram Ockley|curado
+Sport2|Kestrel Foundry #14|Kestrel Foundry|14|Cato Prewitt|curado
+Sport2|Halcyon Foundry #15|Halcyon Foundry|15|Dara Abbot|curado
+Sport2|Halcyon Foundry #16|Halcyon Foundry|16|Edran Bragg|curado
+Sport2|Ironmarch Foundry #17|Ironmarch Foundry|17||curado
+Sport2|Ironmarch Foundry #18|Ironmarch Foundry|18||curado
+Sport2|Copperline Foundry #19|Copperline Foundry|19||curado
+Sport2|Copperline Foundry #20|Copperline Foundry|20||curado
+Sport2|Solstice Foundry #21|Solstice Foundry|21||curado
+Sport2|Solstice Foundry #22|Solstice Foundry|22||curado
+Sport2|Lowtide Foundry #23|Lowtide Foundry|23||curado
+Sport2|Lowtide Foundry #24|Lowtide Foundry|24||curado
+Sport2|Ravenhurst Foundry #25|Ravenhurst Foundry|25||curado
+Sport2|Ravenhurst Foundry #26|Ravenhurst Foundry|26||curado
+Sport2|Amberfall Foundry #27|Amberfall Foundry|27||curado
+Sport2|Amberfall Foundry #28|Amberfall Foundry|28||curado

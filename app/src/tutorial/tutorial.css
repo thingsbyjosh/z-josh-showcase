@@ -1,0 +1,54 @@
+/* driver.js skin matching the design system (spec 2026-07-17). Imported AFTER driver.css
+   in main.tsx, so these rules win by order. */
+.driver-popover {
+  background: var(--surface);
+  color: var(--text-2);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, .55);
+  font-family: inherit;
+  padding: 16px 18px;
+  max-width: 320px;
+}
+.driver-popover-title {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+.driver-popover-description {
+  font-family: inherit;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--text-2);
+}
+.driver-popover-progress-text {
+  font-size: 10px;
+  letter-spacing: .08em;
+  color: var(--text-3);
+}
+.driver-popover-footer button {
+  font-family: inherit;
+  text-shadow: none;
+  background: transparent;
+  color: var(--text-2);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 4px 12px;
+  font-size: 11px;
+}
+.driver-popover-footer .driver-popover-next-btn {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+  font-weight: 700;
+}
+.driver-popover-footer button:hover { filter: brightness(1.15); }
+.driver-popover-close-btn { color: var(--text-3); border: none; }
+/* The popover’s arrow, in the panel’s own color */
+.driver-popover-arrow-side-left.driver-popover-arrow { border-left-color: var(--surface); }
+.driver-popover-arrow-side-right.driver-popover-arrow { border-right-color: var(--surface); }
+.driver-popover-arrow-side-top.driver-popover-arrow { border-top-color: var(--surface); }
+.driver-popover-arrow-side-bottom.driver-popover-arrow { border-bottom-color: var(--surface); }

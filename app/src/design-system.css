@@ -1,0 +1,785 @@
+/* design-system.css — Career Engine · arcade-premium aesthetic (GRID-like) */
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,600&family=JetBrains+Mono:wght@400;500;700&family=Titillium+Web:wght@400;600;700;900&family=Alfa+Slab+One&family=Special+Elite&family=Righteous&family=VT323&display=swap');
+
+:root {
+  --bg:        #0b0c10;
+  --bg-2:      #101218;
+  --surface:   #161922;
+  --surface-2: #1d212c;
+  --surface-3: #262b38;
+  --line:      #2c313e;
+  --line-2:    #3a4150;
+  --text:      #f3f4f7;
+  --text-2:    #b7bfcb;
+  --text-3:    #7e8798;   /* AA: minimum 3:1 against the panels for labels; body text always --text-2 */
+
+  --accent:     #E30613;   /* Career Engine brand red (sampled from the vector) */
+  --accent-text:#ff4438;   /* accent lightened ONLY for small text on the background (#E30613 gives 4.0:1, not enough for AA) */
+  --accent-ink: #ffffff;
+  --gold:      #ffcf4d;
+  --green:     #19d27c;
+  --cyan:      #5ec8ff;
+  --amber:     #ffb84d;
+  --purple:    #b94bff;
+  --danger:    #ff4d4d;
+  /* IDENTITY grey (not a text colour): the "local" sponsor tier and the Off-Road discipline. It used
+   to sit as a loose #9aa3b2 literal in two modules; naming it here brings it into the system and stops it drifting. */
+  --steel:     #9aa3b2;
+  /* SKY for the events hero: two settings, three stops each (the 3rd stop is already --bg/--bg-2 of the
+   palette). They used to sit as literals inside EventPrerace’s inline gradient; this is a named
+   concept, not a casual mix, so it lives here. Night = cold blue; dusk = dirty amber. */
+  --sky-night-1: #101a2e;
+  --sky-night-2: #0a1120;
+  --sky-dusk-1:  #23180f;
+  --sky-dusk-2:  #120d0a;
+  /* RAIN texture over the sky (thin, near-transparent streaks, light blue) */
+  --sky-rain:    rgba(150, 185, 235, .055);
+
+  --r:    0px;             /* corner radius (tweakable) */
+  --skew: -9deg;           /* shear (tweakable) */
+  --gap:  20px;
+
+  --font-display: 'Saira Condensed', system-ui, sans-serif;
+  --font-ui:      'Barlow', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  /* hard console-style selection: double outline, no glow */
+  --ring: 0 0 0 2px var(--bg), 0 0 0 4px #fff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+/* Controls don’t inherit color/font from the body by default (UA default = black + Arial);
+   forcing it avoids black text on dark panels in card-buttons with no color of their own. */
+button, input, select, textarea { font-family: inherit; color: inherit; }
+html, body { height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+#root { height: 100vh; width: 100vw; }
+
+/* backdrop: hard diagonal beam + grain, no soft gradients */
+.app-bg {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    linear-gradient(115deg, transparent 0 58%, rgba(255,255,255,.018) 58% 59%, transparent 59% 72%, rgba(255,255,255,.012) 72% 73%, transparent 73%),
+    repeating-linear-gradient(115deg, transparent 0 2px, rgba(0,0,0,.22) 2px 4px),
+    radial-gradient(150% 110% at 88% -25%, color-mix(in oklab, var(--accent) 9%, transparent), transparent 52%),
+    linear-gradient(180deg, #0e1014, #07080b);
+}
+.app-bg::after { content: ""; position: absolute; inset: 0; background: radial-gradient(120% 90% at 50% 50%, transparent 60%, rgba(0,0,0,.5)); }
+
+/* ---- typography helpers ---- */
+.display { font-family: var(--font-display); font-weight: 800; letter-spacing: .5px; line-height: .94; text-transform: uppercase; }
+/* section labels: game-style condensed, not dashboard micro-mono */
+.kicker  { font-family: var(--font-display); font-weight: 700; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-3); }
+.mono    { font-family: var(--font-mono); }
+.ital    { font-style: italic; }
+
+/* ---- skew shape utility (sheared tag / button) ---- */
+.shear { transform: skewX(var(--skew)); }
+.shear > * { display: inline-block; transform: skewX(calc(-1 * var(--skew))); }
+
+/* ---- buttons: solid wedge, no border ---- */
+.btn {
+  /* justify-content: center — the content is CENTERED inside the wedge. With a button sized to its
+   own text this changes nothing; it matters once the button stretches (flex:1 or width:100%), which
+   is where the content used to stay stuck to the left and the slanted wedge gave it away. */
+  position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+  font-family: var(--font-display); font-weight: 700; font-size: 16px;
+  text-transform: uppercase; letter-spacing: .04em; color: var(--text);
+  background: var(--surface-3); border: none; white-space: nowrap;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.07);
+  padding: 13px 26px 13px 24px; cursor: pointer; transition: .1s ease;
+  clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+}
+.btn:hover { background: #313747; color: #fff; transform: translateX(2px); }
+.btn:focus-visible, .btn.is-focus { outline: none; box-shadow: var(--ring), inset 0 1px 0 rgba(255,255,255,.07); }
+.btn-primary {
+  background: linear-gradient(180deg, color-mix(in oklab, var(--accent) 88%, #fff), var(--accent) 45%);
+  color: var(--accent-ink);
+}
+.btn-primary:hover { filter: brightness(1.08); }
+.btn-ghost { background: transparent; box-shadow: inset 0 0 0 1px var(--line-2); }
+.btn[disabled] { opacity: .35; cursor: not-allowed; filter: grayscale(.6); transform: none; }
+.btn-lg { font-size: 19px; padding: 16px 34px 16px 30px; }
+.btn-sm { font-size: 13px; padding: 8px 20px 8px 16px; }
+
+/* ---- panel: solid plate with a chamfered corner (not a web card) ---- */
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 0;
+  position: relative;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.03);
+}
+.panel::before {
+  content: ""; position: absolute; top: -1px; right: -1px; width: 13px; height: 13px;
+  background: linear-gradient(to bottom left, var(--bg) 50%, transparent 50.5%);
+  pointer-events: none; z-index: 2;
+}
+
+/* ---- focus: hard console-style selection, no floating ---- */
+.focusable { outline: none; transition: box-shadow .08s ease, border-color .08s ease, background .08s ease; }
+.focusable:focus-visible, .focusable.is-focus { box-shadow: var(--ring); z-index: 5; }
+
+/* ---- badges / chips: solid labels, no little web-style border ---- */
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+  padding: 4px 9px; border-radius: 0; background: var(--surface-3); color: var(--text-2);
+  border: 1px solid transparent; white-space: nowrap;
+}
+.chip-accent { background: color-mix(in oklab, var(--accent) 20%, var(--bg-2)); color: var(--accent-text); }   /* 20%: accent-text gives 4.59:1 against the panel (AA); at 24% it dropped to 4.39:1 */
+.chip-gold   { background: color-mix(in oklab, var(--gold) 20%, var(--bg-2)); color: var(--gold); }
+.chip-green  { background: color-mix(in oklab, var(--green) 20%, var(--bg-2)); color: var(--green); }
+.chip-lock   { background: #14161c; color: var(--text-3); }
+
+/* ---- top bar ---- */
+.topbar { display: flex; align-items: center; gap: 18px; padding: 12px 30px; border-bottom: 1px solid var(--line); position: relative; z-index: 3; background: linear-gradient(180deg, rgba(0,0,0,.35), transparent); flex-wrap: wrap; }
+/* T266: min-width:0 is what was missing -- without it, a flex item with flex-basis refuses to shrink below
+   its content (13 unbroken tabs), and that is what pushed the whole .topbar to wrap onto two
+   lines (the brand on one, the tabs alone on the other, with a gap to their right). */
+/* 17/09 (Josh's decision) — A SINGLE ROW, DRIVEN WITH TWO ARROWS.
+   Measured in his window (1282 px at 125% zoom): the brand asks for 232, the right-hand block 539 and the thirteen
+   tabs 1174 — about 2045 for 1282 of width. 763 px are missing, so the row MUST scroll; what
+   is decided here is how it is driven. The first version put in a scrollbar (T266) and the second some 20 px arrows
+   that “were barely visible and did not help see the hidden tabs”. The current ones are real controls:
+   30 px, with a background, normal text contrast and a gradient on the edge that leaves the cut-off tab
+   in view. The language selector went down from 148 to 40 px to give that room back to the tabs. */
+.topbar .tabsbar { flex: 1 1 420px; min-width: 0; }
+.tabsbar { display: flex; align-items: stretch; gap: 2px; min-width: 0; }
+.topbar .brand { display: flex; align-items: center; gap: 14px; }
+.topbar .brand .mark { width: 12px; height: 26px; background: var(--accent); transform: skewX(var(--skew)); }
+
+/* ---- nav: diagonal slabs, not browser tabs ----
+   T266: instead of splitting into two lines when they do not all fit (large fonts / zoom / narrow window),
+   the row stays on a single line and scrolls horizontally -- same pattern as .scroll (thin scrollbar,
+   no native arrow). Splitting into two lines covered the content below and overlapped the indicators in the
+   corner; scrolling keeps all 13 tabs reachable without invading anything. */
+/* 17/09 (Josh's decision) — NO SCROLLBAR. T266 settled that the row would not split into two
+   lines, but left a horizontal scrollbar on the main navigation, which has no business there. Thirteen
+   tabs do not fit at every width or every zoom, so the row STILL scrolls — what
+   changes is how it is driven and how it is announced:
+     · the bar is hidden (`scrollbar-width: none`), not the scrolling;
+     · two arrows appear ONLY when something is out of view, and each one switches off on reaching its end;
+     · and the clipping always leaves a tab HALF-VISIBLE. That is what says “there is more” without taking up space:
+       a cut-off tab reads instantly, a 5 px scrollbar does not.
+   Besides, the row takes ALL the space up to the credits (before a `.grow` ate it), so on
+   normal screens none is left over and the arrows don't even show. */
+/* The space on top is NOT decoration: the notification badges live at `top:-5px` OUTSIDE the button
+, and a scrolling container with `overflow-y:hidden`
+   ate them from above. It is given height inside and recovered outside with the negative margin, so
+   the badge fits whole and the row does not move a single pixel. */
+.tabs { display: flex; gap: 2px; min-width: 0; flex: 1 1 auto; overflow-x: auto; overflow-y: hidden;
+        scrollbar-width: none; scroll-behavior: smooth; padding-top: 7px; margin-top: -7px; }
+.tabs::-webkit-scrollbar { display: none; }
+/* The arrow is a CONTROL, and has to read as one: finger width, its own background and the contrast of normal
+   text. Switched off it does not disappear —the gap stays— so the row does not jump on reaching the end. */
+.tabs-arrow {
+  flex: none; display: flex; align-items: center; justify-content: center;
+  width: 30px; padding: 0; border: 1px solid var(--line); background: var(--surface-2);
+  color: var(--text-1); font-size: 18px; line-height: 1; cursor: pointer; transition: .1s;
+}
+.tabs-arrow:hover:not(:disabled) { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.tabs-arrow:disabled { opacity: .3; cursor: default; }
+/* Settings: the SAME tab as always (diagonal, active state, same height), only labelled with a
+   gear instead of a word. That way it does not look like a foreign button stuck to the credits: it is the last
+   stop of the row, and the `margin-left:auto` is what makes the row BUTT against the money. */
+/* The wheel has to CALL OUT: it is the only destination in the row without a word, so if it stays small
+   it reads as an ornament. Big glyph, normal text color (not the grey of the dormant tabs) and a
+   line on its left that separates it from the row — it is its own zone, next to the credits. */
+/* The wheel has to CALL OUT: it is the only destination in the row without a word, so small and grey it reads
+   as an ornament. Pure white —not the grey of the dormant tabs—, big glyph and its own zone separated
+   by a line, next to the credits. */
+.tab-icon {
+  margin-left: auto; flex: none; padding: 0 18px; line-height: 0; letter-spacing: 0;
+  color: #fff; border-left: 1px solid var(--line); margin-right: 2px;
+  display: flex; align-items: center;
+}
+.tab-icon:hover { color: var(--accent); }
+.tab-icon.active { color: var(--accent); }
+.tab {
+  font-family: var(--font-display); font-weight: 700; text-transform: uppercase; letter-spacing: .04em;
+  font-size: 14px; color: var(--text-3); padding: 8px 22px; cursor: pointer; background: transparent; border: none;
+  transition: .1s; white-space: nowrap; flex: none; position: relative;
+  clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+}
+.tab:hover { color: var(--text); background: rgba(255,255,255,.05); }
+.tab.active { color: var(--accent-ink); background: var(--accent); }
+.tab:focus-visible { outline: none; box-shadow: var(--ring); }
+.tab-badge { display: inline-flex; align-items: center; justify-content: center; min-width: 16px; height: 15px; padding: 0 4px; margin-left: 7px; border-radius: 0; background: #fff; color: #15140f; font-family: var(--font-mono); font-size: 10px; font-weight: 700; vertical-align: middle; }
+.tab:not(.active) .tab-badge { background: var(--accent); color: #fff; }
+
+/* ---- stat readout ---- */
+.stat { display: flex; flex-direction: column; gap: 2px; }
+.stat .v { font-family: var(--font-mono); font-weight: 700; font-size: 18px; color: var(--text); line-height: 1; white-space: nowrap; }
+.stat .l { font-family: var(--font-mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--text-3); }
+
+/* credits: HUD block, no pill shape; sheared gold mark (same family as .brand .mark) */
+.credits-pill { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-weight: 700; color: var(--gold); background: var(--bg-2); border: none; padding: 8px 14px; border-radius: 0; }
+.credits-pill::before { content: ""; width: 7px; height: 16px; background: var(--gold); transform: skewX(var(--skew)); flex: none; }
+
+/* striped image placeholder */
+.img-slot {
+  position: relative; overflow: hidden; background: var(--bg-2);
+  background-image: repeating-linear-gradient(115deg, rgba(255,255,255,.03) 0 14px, transparent 14px 28px);
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--line);
+}
+.img-slot .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--text-3); }
+.img-slot .glyph { position: absolute; font-family: var(--font-display); font-weight: 800; font-style: italic; color: rgba(255,255,255,.05); font-size: clamp(40px, 9vw, 130px); letter-spacing: -2px; user-select: none; }
+
+/* scroll regions */
+.scroll { overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--line-2) transparent; }
+.scroll::-webkit-scrollbar { width: 8px; height: 8px; }
+.scroll::-webkit-scrollbar-thumb { background: var(--line-2); border-radius: 0; }
+
+/* progress bar: hard-edged, with diagonal hatching */
+.bar { height: 7px; background: rgba(0,0,0,.45); border-radius: 0; overflow: hidden; box-shadow: inset 0 0 0 1px rgba(255,255,255,.05); }
+.bar > i { display: block; height: 100%; background: var(--accent); border-radius: 0; background-image: repeating-linear-gradient(115deg, rgba(255,255,255,.22) 0 5px, transparent 5px 10px); }
+
+/* spec micro bar */
+.spec-row { display: grid; grid-template-columns: 64px 1fr 34px; align-items: center; gap: 10px; }
+.spec-row .nm { font-family: var(--font-mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--text-3); }
+.spec-row .track { height: 5px; background: var(--surface-3); border-radius: 3px; overflow: hidden; }
+.spec-row .track > i { display: block; height: 100%; }
+.spec-row .num { font-family: var(--font-mono); font-size: 12px; color: var(--text-2); text-align: right; }
+
+/* fade / slide animation for screen transitions (opacity stays 1 so content is
+   always visible even when the tab is backgrounded and animations are paused) */
+@keyframes screen-in { from { transform: translateY(10px); } to { transform: none; } }
+.screen { animation: screen-in .28s cubic-bezier(.2,.7,.2,1); }
+@media (prefers-reduced-motion: reduce) { .screen { animation: none; } }
+
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes sweep { from { transform: translateX(-110%); } to { transform: translateX(110%); } }
+@keyframes pulse-ring { 0%,100% { opacity: .5; } 50% { opacity: 1; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+.spinner { width: 46px; height: 46px; border-radius: 50%; border: 3px solid var(--surface-3); border-top-color: var(--accent); animation: spin .8s linear infinite; }
+
+/* locked overlay hatch */
+.lockhatch { background-image: repeating-linear-gradient(45deg, rgba(0,0,0,.4) 0 8px, rgba(0,0,0,.0) 8px 16px); }
+
+/* ============================================================
+   AMS2 NATIVE LOOK — used only on the "Carrera Personalizada"
+   launch/handoff + in-sim + results screens. Faithful to game.
+   ============================================================ */
+:root { --ams-red: #d8120c; --ams-red-2: #ff1a13; }
+.ams { font-family: 'Titillium Web', system-ui, sans-serif; color: #e8e8e8; }
+.ams-bg {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(70% 80% at 0% 0%, rgba(150,10,8,.55), transparent 50%),
+    radial-gradient(80% 90% at 100% 100%, rgba(130,8,6,.45), transparent 55%),
+    radial-gradient(60% 60% at 100% 0%, rgba(90,6,5,.3), transparent 55%),
+    linear-gradient(160deg, #150c0c, #060606 60%);
+}
+.ams-title { font-family: 'Titillium Web', sans-serif; font-weight: 400; font-size: 40px; color: #fff; letter-spacing: .5px; }
+.ams-panel { background: linear-gradient(180deg, rgba(40,40,42,.55), rgba(18,18,20,.78)); border: 1px solid rgba(255,255,255,.06); position: relative; }
+.ams-head { background: linear-gradient(180deg, #6c6d70, #3a3b3e); color: #fff; font-weight: 700; font-size: 20px; padding: 11px 18px; display: flex; align-items: center; justify-content: space-between; }
+.ams-head.is-active { background: linear-gradient(180deg, var(--ams-red-2), var(--ams-red)); }
+.ams-notch { width: 0; height: 0; border-style: solid; border-width: 0 22px 22px 0; border-color: transparent var(--ams-red) transparent transparent; position: absolute; top: 0; right: 0; }
+.ams-row { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 14px; font-size: 14px; padding: 4px 0; }
+.ams-row .k { color: #9a9a9c; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.ams-row .v { color: #fff; font-weight: 700; white-space: nowrap; text-align: right; }
+.ams-start {
+  width: 132px; height: 132px; border-radius: 50%; cursor: pointer;
+  background: radial-gradient(circle at 50% 35%, #ff2a22, var(--ams-red));
+  border: 4px solid #fff; box-shadow: 0 0 0 4px var(--ams-red), 0 0 40px rgba(216,18,12,.6); /* unslop-ignore: replica of AMS2’s own START button */
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  color: #fff; font-family: 'Titillium Web'; font-weight: 900; font-size: 22px; letter-spacing: 1px;
+  transition: .15s;
+}
+.ams-start:hover { transform: scale(1.05); filter: brightness(1.08); }
+.ams-start:focus-visible { outline: none; box-shadow: 0 0 0 4px #fff, 0 0 0 8px var(--ams-red), 0 0 50px rgba(216,18,12,.8); } /* unslop-ignore: replica of AMS2’s own START button */
+.ams-logo { font-family: 'Titillium Web'; font-weight: 900; font-style: italic; letter-spacing: 1px; color: #fff; }
+
+/* ---- championship standings grid ---- */
+.champ-grid {
+  display: grid;
+  grid-template-columns: 38px 34px minmax(140px, 1.3fr) repeat(var(--rounds), minmax(32px, 1fr)) 46px 56px;
+  align-items: center;
+}
+.ch-cell { display: flex; align-items: center; padding: 9px 5px; min-width: 0; }
+.ch-rank { justify-content: center; }
+.ch-mv { justify-content: center; }
+.ch-driver { padding-left: 10px; }
+.ch-round { justify-content: center; text-align: center; }
+.ch-last { justify-content: center; background: rgba(255,207,77,.04); align-self: stretch; }
+.ch-total { justify-content: center; background: rgba(255,255,255,.02); align-self: stretch; }
+.champ-grid .mono { font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-3); }
+.ch-row { border-bottom: 1px solid var(--line); transition: background .12s; }
+.ch-row:last-child { border-bottom: none; }
+.ch-row:hover { background: rgba(255,255,255,.02); }
+.ch-you { background: color-mix(in oklab, var(--accent) 13%, transparent) !important; }
+
+/* ---- inbox ---- */
+.mail-item { display: flex; gap: 12px; padding: 14px 16px; cursor: pointer; border-bottom: 1px solid var(--line); transition: background .12s; align-items: flex-start; }
+.mail-item:hover { background: rgba(255,255,255,.025); }
+.mail-item.active { background: color-mix(in oklab, var(--accent) 14%, transparent); }
+.mail-item.unread .mail-subj { color: var(--text); font-weight: 700; }
+.mail-dot { width: 8px; height: 8px; border-radius: 50%; flex: none; margin-top: 6px; }
+.mail-avatar { width: 38px; height: 38px; border-radius: 4px; flex: none; display: grid; place-items: center; font-family: var(--font-display); font-weight: 800; font-size: 16px; color: #fff; }
+
+/* ---- race duration segmented control ---- */
+.dur-seg { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.dur-btn {
+  cursor: pointer; font-family: var(--font-display); font-weight: 700; font-size: 17px;
+  letter-spacing: .02em; padding: 10px 0; border-radius: 3px;
+  border: 1px solid var(--line-2); background: var(--surface-2); color: var(--text-2);
+}
+.dur-btn:hover { border-color: var(--text-3); }
+.dur-btn.on { background: var(--accent); border-color: transparent; color: var(--accent-ink); }
+.dur-btn.on:hover { filter: brightness(1.08); }
+
+/* ---- driver market offers ---- */
+.offer-rewards { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 3px; overflow: hidden; }
+.orw { background: var(--surface); padding: 9px 12px; display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.orw-l { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-3); white-space: nowrap; }
+.orw-v { font-family: var(--font-mono); font-size: 15px; font-weight: 700; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.offer-direct { position: relative; }
+.offer-direct::after { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--accent); }
+
+/* ---- settings controls ---- */
+.set-section { display: flex; align-items: baseline; gap: 14px; margin: 6px 0 14px; }
+.set-head { background: linear-gradient(180deg, var(--surface-2), var(--surface)); border-bottom: 1px solid var(--line); padding: 12px 18px; font-family: var(--font-display); font-weight: 700; font-size: 17px; text-transform: uppercase; letter-spacing: .03em; }
+.set-row { display: flex; align-items: center; gap: 16px; justify-content: space-between; padding: 13px 0; border-bottom: 1px solid var(--line); }
+.set-row:last-child { border-bottom: none; }
+
+/* switch */
+.sw { width: 50px; height: 27px; border-radius: 14px; background: var(--surface-3); border: 1px solid var(--line-2); position: relative; cursor: pointer; transition: background .15s, border-color .15s; padding: 0; }
+.sw .sw-knob { position: absolute; top: 2px; left: 2px; width: 21px; height: 21px; border-radius: 50%; background: var(--text-2); transition: transform .15s, background .15s; }
+.sw.on { background: var(--accent); border-color: transparent; }
+.sw.on .sw-knob { transform: translateX(23px); background: #fff; }
+.sw:focus-visible, .sw.is-focus { outline: none; box-shadow: var(--ring); }
+
+/* segmented */
+.seg { display: inline-flex; gap: 4px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 4px; padding: 3px; }
+.seg-btn { font-family: var(--font-mono); font-size: 12px; font-weight: 600; letter-spacing: .04em; color: var(--text-2); background: transparent; border: none; padding: 6px 13px; border-radius: 3px; cursor: pointer; transition: background .12s, color .12s; }
+.seg-btn:hover { color: var(--text); }
+.seg-btn.on { background: var(--accent); color: var(--accent-ink); }
+.seg-btn:focus-visible { outline: none; box-shadow: var(--ring); }
+
+/* range slider */
+.sl { -webkit-appearance: none; appearance: none; height: 6px; border-radius: 4px; outline: none; cursor: pointer; flex: 1; }
+.sl::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 18px; height: 18px; border-radius: 50%; background: #fff; border: 3px solid var(--accent); cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,.4); }
+.sl::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: #fff; border: 3px solid var(--accent); cursor: pointer; }
+.sl:focus-visible { box-shadow: var(--ring); }
+
+/* ---- sponsors / living world ---- */
+.trait { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 7px 11px; border: 1px solid var(--line); border-radius: 3px; background: var(--bg-2); }
+.reward-row { display: flex; align-items: center; gap: 11px; padding: 8px 0; }
+.reward-row .col { gap: 1px; }
+
+/* ---- negotiation ---- */
+.demand-check { width: 22px; height: 22px; border-radius: 4px; border: 1.5px solid var(--line-2); display: grid; place-items: center; flex: none; color: #fff; font-size: 13px; transition: .12s; }
+.demand-check.on { background: var(--accent); border-color: transparent; }
+.neg-gauge { filter: drop-shadow(0 8px 30px rgba(0,0,0,.4)); }
+
+/* ---- identity panel ---- */
+.id-card { animation: id-rise .4s cubic-bezier(.2,.7,.2,1); box-shadow: 0 30px 80px -30px rgba(0,0,0,.8); }
+@keyframes id-rise { from { transform: translateY(16px); } to { transform: none; } }
+.id-input {
+  width: 100%; font-family: var(--font-ui); font-size: 16px; color: var(--text);
+  background: var(--bg-2); border: 1px solid var(--line-2); border-radius: 3px; padding: 12px 14px;
+  transition: border-color .14s, box-shadow .14s;
+}
+.id-input::placeholder { color: var(--text-3); }
+.id-input:focus { outline: none; border-color: var(--accent); }
+.id-input.focusable:focus-visible { box-shadow: var(--ring); }
+.id-select { cursor: pointer; appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--text-3) 50%), linear-gradient(135deg, var(--text-3) 50%, transparent 50%); background-position: calc(100% - 16px) 50%, calc(100% - 11px) 50%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; padding-right: 30px; }
+.id-seg-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.id-seg {
+  cursor: pointer; font-family: var(--font-display); font-weight: 700; font-size: 15px; text-transform: uppercase;
+  letter-spacing: .03em; padding: 12px 0; border-radius: 3px; border: 1px solid var(--line-2);
+  background: var(--surface-2); color: var(--text-2); transition: .12s;
+}
+.id-seg:hover { border-color: var(--text-3); }
+
+/* ---- legacy (legado) ---- */
+.lg-dot-badge { display: inline-flex; align-items: center; justify-content: center; min-width: 18px; height: 18px; padding: 0 5px; background: var(--accent); color: #fff; font-family: var(--font-mono); font-size: 10px; font-weight: 700; }
+.lg-wk { display: inline-flex; align-items: center; justify-content: center; padding: 2px 7px; border-radius: 3px; background: var(--surface-3); color: var(--text-2); font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: .05em; flex: none; }
+.lg-pulse { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 0 var(--accent); animation: lg-ping 1.6s ease-out infinite; }
+@keyframes lg-ping { 0% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--accent) 70%, transparent); } 70% { box-shadow: 0 0 0 8px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
+@media (prefers-reduced-motion: reduce) { .lg-pulse { animation: none; } }
+.lg-stand-row { display: grid; grid-template-columns: 28px 1fr 34px 46px; align-items: center; gap: 8px; padding: 8px 14px; border-bottom: 1px solid var(--line); }
+.lg-stand-row:last-child { border-bottom: none; }
+.lg-stand-head { background: var(--surface-2); }
+.lg-stand-head .mono { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-3); }
+.lg-you { background: color-mix(in oklab, var(--accent) 13%, transparent); }
+
+/* ---- calendar filters ---- */
+.cal-filters { display: flex; align-items: stretch; gap: 16px; padding: 10px 30px 14px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.cal-fgroup { display: flex; flex-direction: column; gap: 6px; }
+.cal-flabel { font-family: var(--font-mono); font-size: 9px; letter-spacing: .16em; text-transform: uppercase; color: var(--text-3); }
+.cal-fdiv { width: 1px; background: var(--line); align-self: stretch; }
+.cal-seg-row { display: flex; gap: 6px; }
+/* 17/09 (Josh) — ERA, STATUS AND DISCIPLINE HAVE TO LINE UP. The two button types used different typefaces
+   (display versus ui) and one also carries a colored dot, so each computed its own
+   line height and the three rows came out at slightly different heights. With an explicit height and the
+   content centered, the three groups match no matter what the fonts or the language. */
+.cal-seg, .cal-disc { height: 30px; padding-top: 0; padding-bottom: 0; }
+.cal-seg {
+  cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 700; font-size: 13px; text-transform: uppercase;
+  letter-spacing: .03em; padding: 0 13px; border-radius: 3px; border: 1px solid var(--line-2);
+  background: var(--surface-2); color: var(--text-2); transition: .12s; white-space: nowrap;
+}
+.cal-seg:hover { border-color: var(--text-3); }
+.cal-disc {
+  cursor: pointer; display: inline-flex; align-items: center; gap: 7px; font-family: var(--font-ui); font-weight: 600;
+  font-size: 12.5px; padding: 0 12px; border-radius: 3px; border: 1px solid var(--line-2);
+  background: var(--surface-2); color: var(--text-2); transition: .12s; white-space: nowrap;
+}
+.cal-disc:hover { border-color: var(--text-3); }
+
+/* ---- telemetry (motec-style) ---- */
+.tele-toolbar { display: flex; align-items: center; gap: 12px; padding: 10px 30px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.tele-tlabel { font-size: 9px; letter-spacing: .16em; text-transform: uppercase; color: var(--text-3); }
+.tele-lap { cursor: pointer; display: inline-flex; align-items: center; gap: 7px; font-family: var(--font-ui); font-size: 12.5px; padding: 6px 11px; border-radius: 3px; border: 1px solid var(--line-2); background: var(--surface-2); color: var(--text-2); transition: .12s; white-space: nowrap; }
+.tele-lap:hover { border-color: var(--text-3); }
+.tele-chip { cursor: pointer; display: inline-flex; align-items: center; gap: 7px; font-family: var(--font-ui); font-weight: 600; font-size: 12px; padding: 6px 11px; border-radius: 3px; border: 1px solid var(--line-2); background: var(--surface-2); color: var(--text); transition: .12s; }
+.tele .panel svg { cursor: crosshair; }
+
+/* ---- controller button bar (footer, console-style) ---- */
+.gamebar { display: flex; align-items: center; gap: 26px; padding: 9px 30px; border-top: 1px solid var(--line); background: rgba(0,0,0,.5); position: relative; z-index: 3; }
+.gb-hint { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-ui); font-size: 12.5px; font-weight: 600; color: var(--text-3); white-space: nowrap; }
+.gb-key { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--surface-3); color: var(--text); font-family: var(--font-display); font-weight: 800; font-size: 12px; font-style: normal; box-shadow: inset 0 -2px 0 rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.12); }
+.gb-key.gb-a { background: #2e7d46; color: #fff; }
+.gb-key.gb-b { background: #a33232; color: #fff; }
+.gb-bumper { border-radius: 3px 3px 4px 4px; width: 30px; font-size: 10.5px; }
+
+/* no rounded corners on controls (angular design language) */
+.lg-wk, .dur-btn, .seg, .seg-btn, .mail-avatar, .id-input, .id-seg, .trait,
+.offer-rewards, .cal-seg, .cal-disc, .tele-lap, .tele-chip, .demand-check,
+.spec-row .track, .lg-dot-badge { border-radius: 0; }
+
+/* ---- ladder matrix (tree) ---- */
+.ladder-card { display: flex; align-items: center; height: 30px; background: var(--surface-2); border: 1px solid var(--line); cursor: pointer; transition: background .1s, border-color .1s; }
+.ladder-card:hover { background: var(--surface-3); border-color: var(--accent); }
+.ladder-dlc { flex: none; font-family: var(--font-mono); font-size: 8.5px; font-weight: 700; letter-spacing: .08em; color: var(--gold); background: color-mix(in oklab, var(--gold) 14%, var(--bg-2)); padding: 2px 5px; margin-right: 6px; }
+
+/* ---- times (race log) ---- */
+.times-grid { display: grid; grid-template-columns: 52px minmax(160px, 1.6fr) 70px 70px 110px 90px; align-items: center; gap: 8px; padding: 8px 16px; }
+.times-list { display: grid; grid-template-columns: 44px minmax(200px, 2fr) 90px 80px 110px 110px 30px; align-items: center; gap: 8px; padding: 10px 16px; }
+.times-head { background: var(--surface-2); border-bottom: 1px solid var(--line); }
+.times-head .mono { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-3); }
+.times-row { border-bottom: 1px solid var(--line); }
+.times-row:last-child { border-bottom: none; }
+.times-row:hover { background: rgba(255,255,255,.02); }
+
+/* layout helpers */
+.row { display: flex; align-items: center; }
+.col { display: flex; flex-direction: column; }
+.gap8 { gap: 8px; } .gap12 { gap: 12px; } .gap16 { gap: 16px; } .gap24 { gap: 24px; }
+.grow { flex: 1; } .center { align-items: center; justify-content: center; }
+.between { justify-content: space-between; } .wrap { flex-wrap: wrap; }
+
+/* ---- sponsor cards (a Balatro-style card system) ---- */
+.scard {
+  --tier: #9aa3b2;
+  --sc-w: 206px; --sc-name: 23px; --sc-main: 25px;
+  position: relative; width: var(--sc-w); aspect-ratio: 5 / 7; flex: none;
+  display: flex; flex-direction: column;
+  background:
+    radial-gradient(130% 65% at 50% -12%, color-mix(in oklab, var(--tier) 17%, transparent), transparent 58%),
+    linear-gradient(180deg, var(--surface-2), var(--surface));
+  border: 1px solid color-mix(in oklab, var(--tier) 45%, var(--line));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.05), 0 12px 26px -16px rgba(0,0,0,.75);
+  transition: transform .15s cubic-bezier(.2,.7,.2,1), box-shadow .15s, border-color .15s, opacity .15s;
+  overflow: hidden;
+}
+.scard-lg { --sc-w: 250px; --sc-name: 28px; --sc-main: 31px; }
+.scard-sm { --sc-w: 162px; --sc-name: 18px; --sc-main: 20px; }
+.scard::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--tier); z-index: 2; }
+.scard::after { content: ""; position: absolute; top: -1px; right: -1px; width: 14px; height: 14px; background: linear-gradient(to bottom left, var(--bg) 50%, transparent 50.5%); z-index: 3; pointer-events: none; }
+.scard.clickable { cursor: pointer; outline: none; }
+.scard.clickable:hover { transform: translateY(-6px) rotate(-1.2deg); border-color: color-mix(in oklab, var(--tier) 80%, #fff); box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 24px 42px -18px rgba(0,0,0,.85); z-index: 4; }
+.scard.clickable:focus-visible { box-shadow: var(--ring), 0 12px 26px -16px rgba(0,0,0,.75); z-index: 5; }
+.scard.selected { box-shadow: var(--ring), 0 18px 38px -16px rgba(0,0,0,.8); z-index: 5; }
+.scard.dim { opacity: .42; filter: grayscale(.55); }
+.scard.dim.clickable:hover { transform: none; }
+.scard-holo { position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background: repeating-linear-gradient(115deg, color-mix(in oklab, var(--tier) 14%, transparent) 0 3px, transparent 3px 10px);
+  opacity: .3; }
+.scard-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 12px 12px 0; position: relative; z-index: 1; }
+.scard-rarity { font-family: var(--font-mono); font-size: 9px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--tier); white-space: nowrap; }
+.scard-life { font-family: var(--font-mono); font-size: 8.5px; letter-spacing: .1em; color: var(--text-3); white-space: nowrap; }
+.scard-brand { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 2px 13px; position: relative; min-height: 0; z-index: 1; }
+.scard-glyph { position: absolute; right: -6px; top: 50%; transform: translateY(-54%) skewX(var(--skew)); font-family: var(--font-display); font-weight: 800; font-style: italic; font-size: calc(var(--sc-w) * .62); line-height: 1; color: color-mix(in oklab, var(--tier) 55%, transparent); opacity: .13; user-select: none; pointer-events: none; }
+.scard-name { font-family: var(--font-display); font-weight: 800; font-style: italic; text-transform: uppercase; letter-spacing: .3px; line-height: .92; font-size: var(--sc-name); color: var(--text); text-wrap: balance; }
+.scard-tag { font-family: var(--font-mono); font-size: 9px; letter-spacing: .06em; color: var(--text-3); margin-top: 7px; }
+.scard-fx { margin: 0 10px; background: rgba(0,0,0,.38); border: 1px solid color-mix(in oklab, var(--tier) 30%, var(--line)); padding: 8px 11px 9px; position: relative; z-index: 1; }
+.scard-fx .trig { font-family: var(--font-mono); font-size: 8.5px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; color: var(--tier); margin-bottom: 3px; }
+.scard-fx .main { font-family: var(--font-display); font-weight: 800; font-style: italic; font-size: var(--sc-main); line-height: 1; color: var(--text); white-space: nowrap; }
+.scard-fx .sub { font-family: var(--font-ui); font-weight: 600; font-size: 11px; color: var(--text-2); }
+.scard-fx .mainspecial { font-family: var(--font-ui); font-weight: 700; font-size: 12px; line-height: 1.3; color: var(--text); }
+/* Catalogue v2 (spec): EXTRA-compact effects under the main fx panel -- the counterweight to a
+   dual risk/reward card (e.g. ×0.8 REP, −Cr 500 entry fee per race). ".downside" tints the line when
+   the effect punishes (mult<1 or a negative bonus/fee); positive ones keep the neutral tone by default. */
+.scard-fx-extra { margin: 6px 10px 0; display: flex; flex-direction: column; gap: 3px; position: relative; z-index: 1; }
+.scard-fx-extra-line { display: flex; align-items: baseline; gap: 6px; }
+.scard-fx-extra-line .main { font-family: var(--font-display); font-weight: 800; font-style: italic; font-size: 12px; line-height: 1; color: var(--text-2); }
+.scard-fx-extra-line .sub { font-family: var(--font-ui); font-weight: 600; font-size: 9.5px; color: var(--text-3); }
+.scard-fx-extra-line.downside .main { color: var(--danger); }
+.scard-fx-extra-line.downside .sub { color: color-mix(in oklab, var(--danger) 65%, var(--text-3)); }
+.scard-clause { padding: 7px 13px 0; font-family: var(--font-mono); font-style: italic; font-size: 9px; line-height: 1.35; color: color-mix(in oklab, var(--danger) 75%, var(--text-2)); position: relative; z-index: 1; }
+/* 0.7.0 (): effect card on mouse hover. Flat plate with the tier bar on top (the same signature as
+   the card), no shadow or radius; it never intercepts the mouse so it does not steal the card's hover or drag. */
+.scard-tip { position: fixed; z-index: 60; pointer-events: none; padding: 11px 13px 12px;
+  background: var(--surface-2); border: 1px solid color-mix(in oklab, var(--tier) 45%, var(--line-2));
+  box-shadow: inset 0 3px 0 var(--tier), inset 0 4px 0 rgba(255,255,255,.04);
+  display: flex; flex-direction: column; gap: 7px; }
+.scard-tip-when { font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--tier); padding-top: 2px; }
+.scard-tip-fx { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.scard-tip-fx li { font-family: var(--font-ui); font-weight: 600; font-size: 13.5px; line-height: 1.3; color: var(--text); }
+.scard-tip-fx li.downside { color: color-mix(in oklab, var(--danger) 80%, var(--text)); }
+.scard-tip-row { font-family: var(--font-ui); font-size: 12.5px; line-height: 1.4; color: var(--text-2); border-top: 1px solid var(--line); padding-top: 6px; }
+.scard-tip-clause { color: color-mix(in oklab, var(--danger) 70%, var(--text-2)); }
+.scard-foot { margin-top: auto; display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 8px 12px 11px; position: relative; z-index: 1; }
+.scard-pips { display: inline-flex; gap: 4px; }
+.scard-pips .pip { width: 8px; height: 8px; background: var(--surface-3); clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); }
+.scard-pips .pip.on { background: var(--tier); }
+.scard-price { font-family: var(--font-mono); font-size: 12.5px; font-weight: 700; color: var(--gold); white-space: nowrap; }
+.scard-stamp { position: absolute; inset: 0; display: grid; place-items: center; z-index: 6; pointer-events: none; background: rgba(6,7,10,.45); font-family: var(--font-display); font-weight: 800; font-size: 21px; letter-spacing: .12em; text-transform: uppercase; color: var(--green); }
+.scard-stamp b { font-weight: 800; border: 2px solid var(--green); padding: 7px 18px; transform: rotate(-8deg); background: rgba(6,7,10,.72); }
+@keyframes scard-deal { from { opacity: 0; transform: translateY(30px) rotate(4deg) scale(.94); } }
+/* the final 1.15 deliberately OVERSHOOTS the resting value: it’s the card landing on the table. The
+   only curve in the system with overshoot (an exception documented in DESIGN.md); the line below
+   cancels it if the user asks for less motion. */
+.scard-deal { animation: scard-deal .5s cubic-bezier(.2,.85,.25,1.15) backwards; }
+@media (prefers-reduced-motion: reduce) { .scard-deal { animation: none; } .scard.clickable:hover { transform: none; } }
+
+/* drag & drop for cards */
+.scard[draggable="true"] { cursor: grab; }
+.scard.dragging { opacity: .35; filter: grayscale(.4); transform: none !important; }
+.scard.drop-hint { border-color: var(--accent); box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent); transform: none; }
+.benchzone { border: 1.5px dashed transparent; margin: -8px; padding: 8px; transition: border-color .12s, background .12s; }
+.benchzone.drag-over { border-color: var(--accent); background: color-mix(in oklab, var(--accent) 6%, transparent); }
+
+/* empty / locked slot */
+.cslot { --sc-w: 206px; width: var(--sc-w); aspect-ratio: 5 / 7; flex: none; display: grid; place-items: center;
+  border: 1.5px dashed var(--line-2); background: rgba(0,0,0,.18); transition: border-color .12s, background .12s; }
+.cslot.scard-lg { --sc-w: 250px; } .cslot.scard-sm { --sc-w: 162px; }
+.cslot.locked { border-style: solid; border-color: var(--line); background-image: repeating-linear-gradient(45deg, rgba(0,0,0,.35) 0 8px, transparent 8px 16px); }
+.cslot.target { border-color: var(--accent); background: color-mix(in oklab, var(--accent) 7%, transparent); cursor: pointer; animation: pulse-ring 1.2s ease-in-out infinite; }
+.cslot.target:hover { background: color-mix(in oklab, var(--accent) 14%, transparent); }
+.cslot.drag-over { border-color: var(--accent); border-style: solid; background: color-mix(in oklab, var(--accent) 12%, transparent); }
+.cslot:focus-visible { outline: none; box-shadow: var(--ring); }
+
+/* Focus mark for keyboard/gamepad navigation (29/07). :focus-visible is a browser heuristic and
+   does NOT activate when focus is moved by script, so gamepad navigation moved focus without
+   showing anything. useGamepadNav sets .is-focus by hand; several components already had their own
+   .is-focus variant, this rule covers the ones that don’t. The class is DOUBLED on purpose: it raises
+   specificity just enough to beat each component’s own single-class selector rules, without
+   resorting to !important. */
+   Y no reutiliza --ring: ese aro es blanco y fino, pensado para tabular de vez en cuando en un monitor.
+   Navegando a mando o a flechas el foco es lo ÚNICO que te dice dónde estás, y encima se mira desde el
+   casco, así que lleva halo rojo de marca. El outline va además del box-shadow porque dentro de un
+   contenedor con overflow el aro se recorta y se queda en nada. */
+/* 27/09 (Josh, rc.4: “in Memories it's not clear what is selected”): several cards paint their
+   SELECTED state with an INLINE box-shadow (Memories, Settings difficulty, the cars of an event), and an
+   inline style beats any class. The focus halo stayed in the thin outline and was confused with the
+   “selected” border. Here !important is needed: it is the only way to beat an inline style. */
+.is-focus.is-focus {
+  box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px #fff, 0 0 0 7px var(--accent),
+              0 0 24px color-mix(in srgb, var(--accent) 55%, transparent) !important;
+  outline: 2px solid var(--accent) !important;
+  outline-offset: 2px;
+  z-index: 5;
+}
+
+/* Focus on WEDGE-shaped elements (.btn and .tab). clip-path crops away anything the element paints
+   outside its own silhouette: outward box-shadow and outline included. On these, the --ring halo was
+   always invisible, even with :focus-visible, so on a red button there was no way to tell you had it.
+   Here focus goes INSIDE instead, with inset shadows, which do follow the wedge’s shape.
+   The selectors double their class to beat the generic .is-focus rule above. */
+.btn.is-focus.is-focus, .btn:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--bg), inset 0 0 0 5px #fff, inset 0 1px 0 rgba(255,255,255,.07);
+}
+.tab.is-focus.is-focus, .tab:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 1px var(--bg), inset 0 0 0 3px #fff;
+}
+
+/* ---- picker: custom dropdown (ui/Picker.tsx) ----
+   It is not a <select>: in VR the native list is drawn by Windows OUTSIDE the client area that is mirrored to the
+   headset, so it would not be seen. This is the same thing inside the document.
+   The heights (38 the trigger, 34 the rows) are NOT aesthetic: in the headset you aim with your
+   head or with a laser at a meter and a half, and a normal list row is missed constantly. */
+.pick { position: relative; }
+.pick-btn {
+  width: 100%; height: 38px; padding: 0 12px; cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  font: inherit; color: var(--text); text-align: left;
+  background: var(--surface-2); border: 1px solid var(--line); border-radius: 0;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
+  transition: border-color .12s, background .12s;
+}
+.pick[data-compact="1"] .pick-btn { padding: 0 8px; gap: 4px; }
+.pick[data-compact="1"] .pick-val { font-weight: 700; letter-spacing: .04em; }
+.pick[data-compact="1"] .pick-caret { font-size: 9px; }
+.pick-btn:hover { border-color: var(--line-2); background: var(--surface-3); }
+.pick-btn:focus-visible { outline: none; box-shadow: var(--ring); }
+.pick-btn .pick-val { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pick-btn .pick-caret { color: var(--text-3); flex: 0 0 auto; font-size: 10px; transition: transform .12s; }
+.pick[data-open="1"] .pick-caret { transform: rotate(180deg); }
+
+/* 17/09 — THE LIST DOES NOT INHERIT THE BUTTON'S WIDTH. With a narrow button (the language, 72 px) the list
+   came out 72 px wide with names like “Português (BR)” inside: cut-off text and TWO scrollbars, one per
+   axis. The button can be as short as it likes; the list is sized by its own content and anchored to the
+   right so it does not leave the window when the button is against the edge. */
+.pick-list {
+  position: absolute; right: 0; top: 100%; margin-top: -1px; z-index: 40;
+  min-width: 100%; width: max-content; max-width: 280px;
+  overflow-y: auto; overflow-x: hidden;
+  background: var(--surface); border: 1px solid var(--line-2); border-radius: 0;
+  box-shadow: 0 14px 34px rgba(0,0,0,.55);
+}
+.pick-opt {
+  display: flex; align-items: center; width: 100%; height: 34px; padding: 0 12px;
+  font: inherit; color: var(--text); text-align: left; cursor: pointer;
+  background: transparent; border: none; border-bottom: 1px solid var(--line);
+  transition: background .12s;
+}
+.pick-opt:last-child { border-bottom: none; }
+.pick-opt:hover { background: rgba(255,255,255,.04); }
+/* Selected: the same accent veil used by .ch-you and .mail-item.active, plus a bar on the
+   left. The full-strength accent (which is what was there) covered the text and did not resemble
+   anything else in the app. */
+.pick-opt.on {
+  background: color-mix(in oklab, var(--accent) 14%, transparent);
+  box-shadow: inset 3px 0 0 var(--accent);
+  font-weight: 700;
+}
+.pick-opt.on:hover { background: color-mix(in oklab, var(--accent) 20%, transparent); }
+
+/* 17/09 — THE CLOCK RUNNING. While the engine advances, the dialog sat still and there was no way to
+   tell “working” from “hung”. Two pulsing triangles: cheap, depends on no library and
+   switches itself off with `prefers-reduced-motion`, which is what is asked by those who get dizzy from motion. */
+.time-run { display: inline-block; animation: time-run 900ms ease-in-out infinite; }
+@keyframes time-run {
+  0%, 100% { opacity: .35; transform: translateX(0); }
+  50%      { opacity: 1;   transform: translateX(3px); }
+}
+@media (prefers-reduced-motion: reduce) { .time-run { animation: none; opacity: 1; } }
+
+/* 17/09 — THE CALENDAR SHEET. Time has to be SEEN passing: one sheet per day, torn off like on
+   a wall calendar. The stack underneath is what makes it read as "tearing off" and not as "blinking":
+   there are two sheets drawn behind, slightly rotated, so when the top one falls another is left underneath.
+   The animation is a FALL, not an entrance, because what is watched is the sheet that leaves.
+   No libraries, and switched off entirely with `prefers-reduced-motion` — there the sheet simply changes number. */
+.hoja-pila { position: relative; width: 132px; height: 132px; }
+.hoja-pila::before, .hoja-pila::after {
+  content: ''; position: absolute; inset: 0; background: var(--surface-2);
+  border: 1px solid var(--line); border-radius: 2px;
+}
+.hoja-pila::before { transform: rotate(-2.5deg) translateY(3px); }
+.hoja-pila::after  { transform: rotate(1.5deg)  translateY(1px); }
+.hoja {
+  position: absolute; inset: 0; z-index: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px;
+  background: var(--surface); border: 1px solid var(--line-2); border-radius: 2px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.45);
+  animation: hoja-cae 120ms ease-in both;
+  transform-origin: 50% 0;
+}
+/* The top edge, where the ring would go */
+.hoja::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 9px;
+  background: var(--bg-2); border-bottom: 1px solid var(--line);
+}
+.hoja-mes  { font-family: var(--font-mono); font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
+             color: var(--accent-text); margin-top: 8px; }
+.hoja-dia  { font-family: var(--font-display); font-weight: 700; font-size: 52px; line-height: 1; color: var(--text-1); }
+.hoja-anyo { font-family: var(--font-mono); font-size: 11px; color: var(--text-3); }
+@keyframes hoja-cae {
+  0%   { opacity: 0; transform: rotateX(-62deg) translateY(-8px); }
+  100% { opacity: 1; transform: rotateX(0)      translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) { .hoja { animation: none; } }
+
+/* ============================ ERA SKINS (04/10) ============================
+   A season before 2000 is recognised by the MATERIAL of its card, not just a chip: printed programme
+   (60s), paddock sticker (70s), teletext (80s) and TV caption (90s). Worn by the Memories rail
+   (.era-rail) and the day card in the Calendar. The class is decided by ui/eraSkin.ts from the series year.
+   Each skin REDEFINES the text and colour tokens inside the card, so chips, dots and labels that already
+   use var(--...) adapt on their own (a light gold on cream paper would not be readable). The .panel bevel is kept. */
+.panel.era-skin { color: var(--text); }
+/* the name: one line with an ellipsis. The line height and the room on the right keep italics and tall strokes
+   from being clipped by overflow:hidden (it happened with "HARBOR CUP 683" in the 90s skin). */
+.era-skin .era-name { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.2 !important; padding-right: .18em; }
+.era-skin.is-locked, .era-skin.lockhatch { filter: saturate(.5) brightness(.82); }
+.era-rail .era-body { flex: 1; padding: 11px 13px; min-width: 0; }
+
+/* 60s · printed programme */
+.panel.era-60 {
+  --text: #1d1a16; --text-2: #3d362b; --text-3: #5f5747; --line: #b8ab8c; --surface-3: #cfc3a4; --bg-2: #e9dfc6;
+  --gold: #7a5200; --amber: #8a4f00; --purple: #5f2aa0; --cyan: #0e5a86; --green: #0d6b3c; --accent-text: #b3261e; --danger: #b3261e;
+  background-color: #e9dfc6; border-color: #b8ab8c;
+  background-image: repeating-linear-gradient(0deg, rgba(60,40,10,.045) 0 1px, transparent 1px 3px);
+}
+.era-60 .era-name { font-family: 'Alfa Slab One', Rockwell, serif; font-weight: 400; text-transform: none; letter-spacing: .01em; text-shadow: 1.2px .8px 0 rgba(179,38,30,.5); }
+.era-60 .mono, .era-60 .chip { font-family: 'Special Elite', 'Courier New', monospace; }
+.era-60 .chip { background: transparent; border: 1.5px solid currentColor; }
+.era-60 .chip-lock { color: #b3261e; }
+/* the calendar class label carries the discipline colour inline (cyan, green...): it is unreadable on paper */
+.era-60 .era-class { color: var(--text-2) !important; }
+.era-rail.era-60 { background-image: repeating-linear-gradient(0deg, rgba(60,40,10,.045) 0 1px, transparent 1px 3px), radial-gradient(circle at 0 8px, var(--bg) 4px, transparent 4.5px); background-size: auto, 9px 16px; background-repeat: repeat, repeat-y; }
+.era-rail.era-60 .era-body { margin-left: 14px; padding-left: 10px; border-left: 1px dashed rgba(29,26,22,.4); }
+.era-rail.era-60 .chip { transform: rotate(-3deg); }
+.era-60.is-active { outline: 2px solid #b3261e; outline-offset: 2px; }
+
+/* 70s · paddock sticker */
+.panel.era-70 {
+  --text: #f3e6c8; --text-2: #e0cfa8; --text-3: #bfa97f; --line: #5a3f2a; --surface-3: #4a3322; --bg-2: #2b1d14;
+  background-color: #2b1d14; border-color: #5a3f2a;
+  background-image: linear-gradient(0deg, #f3e6c8 0 3px, #e2b13c 3px 6px, #e8742a 6px 9px, transparent 9px);
+}
+.era-70 .era-name { font-family: 'Righteous', 'Arial Rounded MT Bold', sans-serif; font-weight: 400; text-transform: none; letter-spacing: 0; }
+.era-70 .chip { border-radius: 99px; background: #2b1d14; border: 1.5px solid currentColor; }
+.era-70 .chip-lock { color: #f3e6c8; }
+.era-rail.era-70 { background-image: linear-gradient(100deg, transparent 0 66%, #e8742a 66% 74%, #e2b13c 74% 82%, #f3e6c8 82% 87%, transparent 87%); }
+.era-rail.era-70 .era-name { max-width: 62%; }
+.era-70.is-active { outline: 2px solid #e8742a; outline-offset: 2px; }
+
+/* 80s · teletext */
+.panel.era-80 {
+  --text: #f4f4f4; --text-2: #f4f4f4; --text-3: #9fe8e8; --line: #2fe6e6; --surface-3: #1c1c1c; --bg-2: #000;
+  --gold: #f2e94e; --green: #3be36a; --amber: #f2e94e; --accent-text: #ff5a4f;
+  background: #000; border-color: #2fe6e6;
+}
+.era-80 .era-name, .era-80 .mono, .era-80 .chip { font-family: 'VT323', 'Courier New', monospace; font-size-adjust: .5; letter-spacing: .02em; }
+.era-80 .era-name { color: #f2e94e; font-weight: 400; }
+/* VT323 is a very small blocky font at the same size: its size is fixed here (the inline styles of the
+   cards are designed for Saira and JetBrains Mono). */
+.era-80 .era-name { font-size: 31px !important; line-height: 1 !important; }
+.era-rail.era-80 .era-name { font-size: 23px !important; }
+.era-80 .mono, .era-80 .chip { font-size: 14px !important; line-height: 1.05; letter-spacing: .03em !important; }
+.era-80 .chip { background: transparent; border: 0; padding: 0; }
+.era-80 .chip-lock { color: #ff5a4f; }
+.era-rail.era-80 .era-top { background: #2fe6e6; margin: -11px -13px 4px !important; padding: 0 13px; }
+.era-rail.era-80 .era-top .mono { color: #000; }
+.era-80.is-active { outline: 2px solid #2fe6e6; outline-offset: 2px; }
+
+/* 90s · TV caption */
+.panel.era-90 {
+  --text: #fff; --text-2: #dfe5ff; --text-3: #b3beff; --line: #3f55c4; --surface-3: #2a3fa3; --bg-2: #0b1a5c;
+  --gold: #ffd83a;
+  background: linear-gradient(180deg, #1a2f8f, #0b1a5c); border-color: #3f55c4;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.35), inset 0 -2px 0 rgba(0,0,0,.4);
+}
+.era-90 .era-name { font-style: italic; color: #ffd83a; text-shadow: 1px 1px 0 rgba(0,0,0,.5); }
+.era-90 .chip { background: #fff; color: #101a4a; font-weight: 700; }
+.era-rail.era-90 .era-body { padding-left: 55px; }
+.era-rail.era-90::after {
+  content: attr(data-yr); position: absolute; left: 0; top: 0; bottom: 0; width: 42px; display: grid; place-items: center;
+  background: #ffd83a; color: #101a4a; font-family: var(--font-display); font-style: italic; font-weight: 800; font-size: 20px;
+}
+.era-90.is-active { outline: 2px solid #ffd83a; outline-offset: 2px; }

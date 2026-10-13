@@ -1,0 +1,108 @@
+# series_id|round|doy|date|track_hash|track_name|fmt|laps|durationMin|hour|weather|note
+meridian_prototype|1|56|25 Feb|-421676272|Bellhaven|race|9|34|17|clear|
+meridian_prototype|2|84|25 Mar|2067833597|Cindermoor|race|14|42|16|clear|
+meridian_prototype|3|110|20 Apr|2005304489|Drummond Park|race|21|37|16|clear|
+meridian_prototype|4|132|12 May|-181519190|Ellerby|race|21|21|13|clear|
+meridian_prototype|5|156|5 Jun|1412927506|Fairwater|race|21|28|12|clear|
+meridian_prototype|6|170|19 Jun|-1221327019|Glasshouse|race|18|25|14|clear|
+northgate_tourer|1|42|11 Feb|-181519190|Ellerby|race|11|43|17|clear|
+northgate_tourer|2|65|6 Mar|1412927506|Fairwater|race|22|32|12|clear|
+northgate_tourer|3|90|31 Mar|-1221327019|Glasshouse|race|24|21|14|clear|
+northgate_tourer|4|110|20 Apr|-2069787620|Holloway|race|14|45|14|clear|
+northgate_tourer|5|130|10 May|-618653344|Ilminster|race|22|33|12|clear|
+northgate_tourer|6|155|4 Jun|-1084427319|Junction Bay|race|15|20|13|clear|
+northgate_tourer|7|172|21 Jun|2086152775|Kelvedon|race|16|38|17|clear|
+northgate_tourer|8|193|12 Jul|500392780|Lyndhurst|race|17|38|12|clear|
+northgate_tourer|9|217|5 Aug|-2057430427|Marchwood|race|22|42|12|clear|
+northgate_tourer|10|245|2 Sep|919571442|Netherby|race|23|23|14|clear|
+northgate_tourer|11|272|29 Sep|730615197|Oakhanger|race|24|37|16|clear|
+northgate_tourer|12|300|27 Oct|-1564101489|Pentridge|race|23|37|14|clear|
+sablefield_openwheel|1|52|21 Feb|-2069787620|Holloway|race|23|28|17|clear|
+sablefield_openwheel|2|74|15 Mar|-618653344|Ilminster|race|9|21|11|clear|
+sablefield_openwheel|3|98|8 Apr|-1084427319|Junction Bay|race|17|25|17|clear|
+sablefield_openwheel|4|114|24 Apr|2086152775|Kelvedon|race|14|32|11|clear|
+sablefield_openwheel|5|130|10 May|500392780|Lyndhurst|race|16|43|15|clear|
+sablefield_openwheel|6|150|30 May|-2057430427|Marchwood|race|15|44|17|clear|
+sablefield_openwheel|7|171|20 Jun|919571442|Netherby|race|21|38|17|clear|
+sablefield_openwheel|8|194|13 Jul|730615197|Oakhanger|race|18|23|15|clear|
+sablefield_openwheel|9|208|27 Jul|-1564101489|Pentridge|race|18|23|11|clear|
+verdant_roadster|1|59|28 Feb|2086152775|Kelvedon|race|11|41|16|clear|
+verdant_roadster|2|80|21 Mar|500392780|Lyndhurst|race|10|42|14|clear|
+verdant_roadster|3|105|15 Apr|-2057430427|Marchwood|race|24|22|13|clear|
+verdant_roadster|4|124|4 May|919571442|Netherby|race|16|27|12|clear|
+verdant_roadster|5|152|1 Jun|730615197|Oakhanger|race|23|33|12|clear|
+verdant_roadster|6|175|24 Jun|-1564101489|Pentridge|race|15|28|12|clear|
+verdant_roadster|7|193|12 Jul|254625301|Ashcombe|race|11|35|16|clear|
+verdant_roadster|8|217|5 Aug|-421676272|Bellhaven|race|15|40|11|clear|
+verdant_roadster|9|240|28 Aug|2067833597|Cindermoor|race|18|45|16|clear|
+verdant_roadster|10|265|22 Sep|2005304489|Drummond Park|race|8|34|17|clear|
+verdant_roadster|11|282|9 Oct|-181519190|Ellerby|race|9|29|15|clear|
+verdant_roadster|12|307|3 Nov|1412927506|Fairwater|race|21|34|17|clear|
+kestrel_sport|1|20|20 Jan|919571442|Netherby|race|14|42|11|clear|
+kestrel_sport|2|39|8 Feb|730615197|Oakhanger|race|13|42|16|clear|
+kestrel_sport|3|64|5 Mar|-1564101489|Pentridge|race|8|21|16|clear|
+kestrel_sport|4|86|27 Mar|254625301|Ashcombe|race|18|27|15|clear|
+kestrel_sport|5|107|17 Apr|-421676272|Bellhaven|race|9|29|15|clear|
+kestrel_sport|6|123|3 May|2067833597|Cindermoor|race|17|29|17|clear|
+kestrel_sport|7|139|19 May|2005304489|Drummond Park|race|12|44|17|clear|
+halcyon_prototype|1|29|29 Jan|254625301|Ashcombe|race|23|37|14|clear|
+halcyon_prototype|2|44|13 Feb|-421676272|Bellhaven|race|17|43|15|clear|
+halcyon_prototype|3|71|12 Mar|2067833597|Cindermoor|race|22|34|11|clear|
+halcyon_prototype|4|96|6 Apr|2005304489|Drummond Park|race|10|39|17|clear|
+halcyon_prototype|5|116|26 Apr|-181519190|Ellerby|race|11|31|17|clear|
+halcyon_prototype|6|130|10 May|1412927506|Fairwater|race|14|38|16|clear|
+halcyon_prototype|7|157|6 Jun|-1221327019|Glasshouse|race|8|31|16|clear|
+ironmarch_tourer|1|26|26 Jan|2005304489|Drummond Park|race|12|29|14|clear|
+ironmarch_tourer|2|47|16 Feb|-181519190|Ellerby|race|13|39|16|clear|
+ironmarch_tourer|3|69|10 Mar|1412927506|Fairwater|race|17|36|11|clear|
+ironmarch_tourer|4|95|5 Apr|-1221327019|Glasshouse|race|20|20|14|clear|
+ironmarch_tourer|5|114|24 Apr|-2069787620|Holloway|race|11|38|12|clear|
+ironmarch_tourer|6|131|11 May|-618653344|Ilminster|race|24|24|15|clear|
+ironmarch_tourer|7|146|26 May|-1084427319|Junction Bay|race|10|42|17|clear|
+copperline_openwheel|1|33|2 Feb|-1221327019|Glasshouse|race|8|29|15|clear|
+copperline_openwheel|2|57|26 Feb|-2069787620|Holloway|race|11|27|12|clear|
+copperline_openwheel|3|83|24 Mar|-618653344|Ilminster|race|22|24|16|clear|
+copperline_openwheel|4|100|10 Apr|-1084427319|Junction Bay|race|17|38|15|clear|
+copperline_openwheel|5|114|24 Apr|2086152775|Kelvedon|race|17|33|17|clear|
+copperline_openwheel|6|136|16 May|500392780|Lyndhurst|race|16|41|13|clear|
+copperline_openwheel|7|160|9 Jun|-2057430427|Marchwood|race|9|29|11|clear|
+solstice_roadster|1|30|30 Jan|-1084427319|Junction Bay|race|12|26|15|clear|
+solstice_roadster|2|57|26 Feb|2086152775|Kelvedon|race|9|29|11|clear|
+solstice_roadster|3|82|23 Mar|500392780|Lyndhurst|race|18|29|12|clear|
+solstice_roadster|4|100|10 Apr|-2057430427|Marchwood|race|12|20|11|clear|
+solstice_roadster|5|117|27 Apr|919571442|Netherby|race|13|31|17|clear|
+solstice_roadster|6|141|21 May|730615197|Oakhanger|race|18|40|16|clear|
+solstice_roadster|7|163|12 Jun|-1564101489|Pentridge|race|11|20|16|clear|
+solstice_roadster|8|188|7 Jul|254625301|Ashcombe|race|24|23|15|clear|
+solstice_roadster|9|210|29 Jul|-421676272|Bellhaven|race|20|43|14|clear|
+lowtide_sport|1|27|27 Jan|-2057430427|Marchwood|race|15|40|16|clear|
+lowtide_sport|2|48|17 Feb|919571442|Netherby|race|21|26|11|clear|
+lowtide_sport|3|66|7 Mar|730615197|Oakhanger|race|8|44|14|clear|
+lowtide_sport|4|92|2 Apr|-1564101489|Pentridge|race|15|38|17|clear|
+lowtide_sport|5|108|18 Apr|254625301|Ashcombe|race|21|45|11|clear|
+lowtide_sport|6|127|7 May|-421676272|Bellhaven|race|24|43|17|clear|
+lowtide_sport|7|143|23 May|2067833597|Cindermoor|race|21|45|12|clear|
+lowtide_sport|8|161|10 Jun|2005304489|Drummond Park|race|23|45|17|clear|
+lowtide_sport|9|182|1 Jul|-181519190|Ellerby|race|13|26|17|clear|
+lowtide_sport|10|201|20 Jul|1412927506|Fairwater|race|15|41|15|clear|
+lowtide_sport|11|221|9 Aug|-1221327019|Glasshouse|race|9|45|14|clear|
+lowtide_sport|12|242|30 Aug|-2069787620|Holloway|race|20|29|12|clear|
+ravenhurst_prototype|1|24|24 Jan|-1564101489|Pentridge|race|12|35|17|clear|
+ravenhurst_prototype|2|45|14 Feb|254625301|Ashcombe|race|16|22|14|clear|
+ravenhurst_prototype|3|72|13 Mar|-421676272|Bellhaven|race|16|23|15|clear|
+ravenhurst_prototype|4|91|1 Apr|2067833597|Cindermoor|race|16|45|17|clear|
+ravenhurst_prototype|5|114|24 Apr|2005304489|Drummond Park|race|8|33|12|clear|
+ravenhurst_prototype|6|135|15 May|-181519190|Ellerby|race|9|21|13|clear|
+ravenhurst_prototype|7|158|7 Jun|1412927506|Fairwater|race|17|44|15|clear|
+ravenhurst_prototype|8|172|21 Jun|-1221327019|Glasshouse|race|18|38|14|clear|
+ravenhurst_prototype|9|193|12 Jul|-2069787620|Holloway|race|16|39|17|clear|
+amberfall_tourer|1|29|29 Jan|2067833597|Cindermoor|race|18|26|11|clear|
+amberfall_tourer|2|52|21 Feb|2005304489|Drummond Park|race|15|42|11|clear|
+amberfall_tourer|3|67|8 Mar|-181519190|Ellerby|race|11|40|16|clear|
+amberfall_tourer|4|94|4 Apr|1412927506|Fairwater|race|18|41|14|clear|
+amberfall_tourer|5|120|30 Apr|-1221327019|Glasshouse|race|18|40|16|clear|
+amberfall_tourer|6|139|19 May|-2069787620|Holloway|race|20|20|15|clear|
+amberfall_tourer|7|161|10 Jun|-618653344|Ilminster|race|12|33|13|clear|
+amberfall_tourer|8|187|6 Jul|-1084427319|Junction Bay|race|24|28|13|clear|
+amberfall_tourer|9|215|3 Aug|2086152775|Kelvedon|race|17|20|17|clear|
+amberfall_tourer|10|230|18 Aug|500392780|Lyndhurst|race|20|32|14|clear|

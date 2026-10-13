@@ -1,0 +1,17 @@
+# profile_id|campos
+grid_nopit_nofuel_60|start=stand;pitreq=0;refok=0;mintyres=0;pitkmh=60
+grid_nopit_nofuel_80|start=stand;pitreq=0;refok=0;mintyres=0;pitkmh=80
+grid_nopit_fuel_60|start=stand;pitreq=0;refok=1;mintyres=0;pitkmh=60
+grid_nopit_fuel_80|start=stand;pitreq=0;refok=1;mintyres=0;pitkmh=80
+grid_pit1_nofuel_60|start=stand;pitreq=1;refok=0;mintyres=0;pitkmh=60
+grid_pit1_nofuel_80|start=stand;pitreq=1;refok=0;mintyres=0;pitkmh=80
+grid_pit1_fuel_60|start=stand;pitreq=1;refok=1;mintyres=0;pitkmh=60
+grid_pit1_fuel_80|start=stand;pitreq=1;refok=1;mintyres=0;pitkmh=80
+roll_nopit_nofuel_60|start=roll;pitreq=0;refok=0;mintyres=0;pitkmh=60
+roll_nopit_nofuel_80|start=roll;pitreq=0;refok=0;mintyres=0;pitkmh=80
+roll_nopit_fuel_60|start=roll;pitreq=0;refok=1;mintyres=0;pitkmh=60
+roll_nopit_fuel_80|start=roll;pitreq=0;refok=1;mintyres=0;pitkmh=80
+roll_pit1_nofuel_60|start=roll;pitreq=1;refok=0;mintyres=0;pitkmh=60
+roll_pit1_nofuel_80|start=roll;pitreq=1;refok=0;mintyres=0;pitkmh=80
+roll_pit1_fuel_60|start=roll;pitreq=1;refok=1;mintyres=0;pitkmh=60
+roll_pit1_fuel_80|start=roll;pitreq=1;refok=1;mintyres=0;pitkmh=80
